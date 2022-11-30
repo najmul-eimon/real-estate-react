@@ -1,0 +1,127 @@
+/*===========================================================
+Banner CSS
+=============================================================*/
+.banner {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.banner .container {
+  max-width: 1595px;
+}
+
+.banner .banner-content {
+  min-height: 650px;
+}
+
+.banner .banner-text {
+  background: url(../images/banner.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 30px;
+  padding: 64px 0;
+  min-height: 650px;
+}
+
+.banner .content {
+  max-width: 670px;
+  margin: auto;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.banner h1 span {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.banner p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-text);
+  padding-top: 8px;
+}
+
+.banner .filter-main {
+  margin-top: -180px;
+  padding: 0 12px;
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .banner {
+    padding-bottom: 32px;
+  }
+
+  .banner .banner-content {
+    min-height: 500px;
+  }
+
+  .banner .banner-text {
+    min-height: 500px;
+  }
+
+  .banner .filter-main {
+    margin-top: -127px;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .banner {
+    padding-bottom: 32px;
+  }
+
+  .banner .banner-content {
+    min-height: 470px;
+  }
+
+  .banner .banner-text {
+    min-height: 470px;
+  }
+
+  .banner .filter-main {
+    margin-top: -115px;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .banner {
+    padding: 16px 0 4px;
+  }
+
+  .banner .banner-content {
+    min-height: 383px;
+  }
+
+  .banner .banner-text {
+    padding: 52px 26px;
+    border-radius: 8px;
+    min-height: 383px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .banner .filter-main {
+    margin-top: -90px;
+  }
+}
