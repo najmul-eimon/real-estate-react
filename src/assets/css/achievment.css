@@ -1,0 +1,87 @@
+/*===========================================================
+achievement CSS
+=============================================================*/
+.achievement {
+  padding: 64px 0;
+}
+
+.achievement .all-achievement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.achievement .single {
+  padding: 24px 0;
+}
+
+.achievement .single .icon {
+  background-color: #E2F3F4;
+  height: 88px;
+  width: 88px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.achievement .single h3 {
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 800;
+  color: var(--primary-text);
+  padding-top: 16px;
+}
+
+.achievement .single p {
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .achievement {
+    padding: 32px 0;
+  }
+
+  .achievement .single h3 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .achievement {
+    padding: 32px 0;
+  }
+
+  .achievement .single h3 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .achievement {
+    padding: 32px 0;
+  }
+
+  .achievement .single {
+    width: 50%;
+    padding: 8px 0;
+  }
+
+  .achievement .single .icon {
+    height: 54px;
+    width: 54px;
+  }
+
+  .achievement .single h3 {
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 8px;
+  }
+
+  .achievement .single p {
+    font-size: 14px;
+  }
+}

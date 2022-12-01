@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import Banner from '../../components/home/Banner'
+import Place from '../../components/home/Place';
+import Achievement from '../../components/shared/Achievement';
 
 const Home = () => {
   useEffect(() => {
@@ -9,6 +11,8 @@ const Home = () => {
   return (
     <>
       <Banner/>
+      <Achievement/>
+      <Place/>
     </>
   )
 }

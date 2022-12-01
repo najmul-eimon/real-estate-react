@@ -1,0 +1,167 @@
+/*===========================================================
+place CSS
+=============================================================*/
+.place {
+  padding: 64px 0;
+}
+
+.place .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.place .column1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / 2;
+}
+
+.place .column2a {
+  grid-row: 1 / 2;
+  grid-column: 2/ 3;
+}
+
+.place .column2b {
+  grid-row: 2 / 3;
+  grid-column: 2/ 3;
+}
+
+.place .column3 {
+  grid-row: 1 / span 2;
+  grid-column: 3 / 4;
+}
+
+.place .all-places .row {
+  --bs-gutter-y: 24px;
+}
+
+.place .single-place a {
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.place .single-place img {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+.place .single-place a:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.place .single-place .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(360deg, rgba(5, 6, 32, 0.8) 0.22%, rgba(0, 0, 0, 0) 27.9%), linear-gradient(0deg, rgba(22, 164, 173, 0.24), rgba(22, 164, 173, 0.24));
+  top: 0;
+  left: 0;
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.place .single-place p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.place .single-place p .place-icon {
+  font-size: 30px;
+  color: var(--white);
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+  .place {
+    padding: 32px 0;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .place .single-place .overlay {
+    padding: 20px;
+  }
+
+  .place .single-place p {
+    font-size: 18px;
+  }
+
+  .place .single-place p i {
+    font-size: 24px;
+  }
+  .place .grid{
+    row-gap: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width:767px) {
+  .place .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .place .column1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+
+  .place .column3 {
+    grid-row: 3 / span 2;
+    grid-column: 1 / 2;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .place .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .place .column1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+
+  .place .column2a {
+    grid-row: 3 / 4;
+    grid-column: 1/ 2;
+  }
+
+  .place .column2b {
+    grid-row: 4 / 5;
+    grid-column: 1/ 2;
+  }
+
+  .place .column3 {
+    grid-row: 5 / span 2;
+    grid-column: 1 / 2;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .place {
+    padding: 32px 0;
+  }
+
+  .place .single-place .overlay {
+    padding: 20px;
+  }
+
+  .place .single-place p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .place .single-place p .place-icon{
+    font-size: 24px;
+  }
+
+}

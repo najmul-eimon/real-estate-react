@@ -132,6 +132,7 @@ filter properties CSS
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+  padding-top: 12px;
 }
 
 .filter-main .multi-range-slider .labels,
