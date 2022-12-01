@@ -1,100 +1,91 @@
 /*===========================================================
 Select CSS
 =============================================================*/
-.select2-container--default .select2-search--dropdown .select2-search__field {
-  display: none;
-}
 
-.select2-search--dropdown {
-  padding: 0;
-}
-
-.select2-dropdown {
+.filter-content .custom-select .select-btn {
   border: 0;
-  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+}
+
+.filter-content .custom-select .btn-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 12px 0 14px;
+  line-height: 22px;
+  color: var(--body-text);
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--body-text);
+}
+
+.filter-content .custom-select .rotate {
+  transform: rotate(180deg);
+}
+
+.filter-content .custom-select .arrow-icon {
+  font-size: 18px;
+  color: var(--body-text1);
+}
+
+.filter-content .custom-select .btn-dropdown {
+  max-height: 200px;
+  position: absolute;
+  z-index: 50;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: auto;
   box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
-}
-
-.select2-results {
   padding: 16px 10px;
+  white-space: nowrap;
+  border-radius: 6px;
 }
 
-.select2-container--default .select2-results__option--selected {
-  background-color: white;
+.filter-content .custom-select .btn-dropdown p {
+  padding: 9px 40px 9px 16px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  color: var(--body-text);
+  font-size: 16px;
+  text-align: left;
 }
 
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+.filter-content .custom-select .btn-dropdown p:hover {
   background-color: rgba(22, 163, 173, 0.1);
   color: var(--primary);
 }
 
-.select2-results__option {
-  padding: 9px 16px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: var(--body-text);
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border: none;
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow:before {
-  content: "\f078";
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 600;
-  color: var(--body-text);
-}
-
-.select2-container--default .select2-selection--single {
-  background-color: var(--white);
-  border: 0;
-  border-bottom: 1px solid var(--body-text);
-  border-radius: 0;
-}
-
-.select2-container .select2-selection--single {
-  height: 48px;
-}
-
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: var(--body-text);
-  line-height: 48px;
-  font-size: 16px;
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 4px;
-  width: auto;
-}
-
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar {
+.filter-content .custom-select .btn-dropdown::-webkit-scrollbar {
   width: 5px;
 }
 
-.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar {
+.filter-content .custom-select .btn-dropdown::-moz-scrollbar {
   width: 5px;
 }
 
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track {
+.filter-content .custom-select .btn-dropdown::-webkit-scrollbar-track {
   background-color: #F4F4F4;
 }
 
-.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar-track {
+.filter-content .custom-select .btn-dropdown::-moz-scrollbar-track {
   background-color: #F4F4F4;
 }
 
-.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb {
+.filter-content .custom-select .btn-dropdown::-webkit-scrollbar-thumb {
   background: var(--primary);
 }
 
-.select2-container--default .select2-results>.select2-results__options::-moz-scrollbar-thumb {
+.filter-content .custom-select .btn-dropdown::-moz-scrollbar-thumb {
   background: var(--primary);
 }
+
 /*===========================================================
 filter properties CSS
 =============================================================*/
@@ -123,55 +114,66 @@ filter properties CSS
 
 .filter-main .bottom-content {
   margin-top: 24px;
-  display: none;
+  transition: all 0.8s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.filter-main .select2-container {
-  width: 100% !important;
+.filter-main .bottom-content.show {
+  max-height: 600px;
+  opacity: 1;
+  visibility: visible;
 }
 
-.filter-main .filter-content .filter-range {
-  margin-top: 12px;
+
+.filter-main .multi-range-slider {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
-.filter-main .filter-content .filter-range input {
-  width: auto;
-  height: auto;
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--body-text2);
-  outline: none;
-  text-align: center;
+.filter-main .multi-range-slider .labels,
+.filter-main .multi-range-slider .caption,
+.filter-main .multi-range-slider .ruler {
+  display: none !important;
 }
 
-.filter-main .filter-content .filter-range .price-range {
-  padding-top: 8px;
-}
-
-.filter-main .filter-content .filter-range .ui-slider-handle {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: var(--white);
-  border: 1px solid var(--body-text2);
-  cursor: pointer;
-  outline: none;
-  top: -4px;
-}
-
-.filter-main .filter-content .filter-range .ui-widget.ui-widget-content {
-  border: none;
-  height: 4px;
+.filter-main .multi-range-slider .bar-right,
+.filter-main .multi-range-slider .bar-left {
   background-color: #E4E5E8;
-  position: relative;
-  margin-left: 10px;
-  border-radius: 22px;
+  border-radius: 22px 0px 0px 22px;
+  box-shadow: none;
+  padding: 2px 0;
 }
 
-.filter-main .filter-content .filter-range .ui-slider-horizontal .ui-slider-range {
-  background: var(--primary);
+.filter-main .multi-range-slider .bar-inner {
+  background-color: #16A4AD;
+  border: 0;
+  box-shadow: none;
+}
+
+.filter-main .multi-range-slider .thumb::before {
+  width: 12px;
+  height: 12px;
+  border: solid 1px var(--body-text2);
+  box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  background-color: #fff;
+  margin: -4px -8px;
+}
+
+.filter-main .range-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.filter-main .range-value p {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--body-text2);
 }
 
 .filter-main .filter-buttons {
@@ -188,9 +190,10 @@ filter properties CSS
   border-radius: 6px;
 }
 
-.filter-main .filter-buttons .filter i {
-  font-size: 24px;
+.filter-main .filter-buttons .filter .filter-icon {
+  font-size: 20px;
   color: var(--primary);
+  transform: rotate(90deg);
 }
 
 .filter-main .filter-buttons .search {
