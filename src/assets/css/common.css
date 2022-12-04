@@ -438,15 +438,14 @@ Quick-menu breadcrumb CSS
   align-items: center;
 }
 
-.breadcrumb-item i {
-  font-size: 20px;
+.breadcrumb-item .icon {
+  font-size: 18px;
   color: var(--primary-text2);
-  padding-right: 11px;
+  margin-right: 11px;
 }
 
-.breadcrumb-item i.home {
-  font-size: 22px;
-  color: var(--primary);
+.breadcrumb-item .icon-home path {
+  stroke: var(--primary);
 }
 
 .breadcrumb-item a:hover {

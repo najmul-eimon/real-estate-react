@@ -1,0 +1,257 @@
+/*===========================================================
+contact CSS
+=============================================================*/
+.contact {
+  padding: 64px 0;
+}
+
+.contact .social-box {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  border-radius: 12px;
+  background-color: var(--white);
+  padding: 16px;
+  height: 204px;
+}
+
+.contact .social-box span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 88px;
+  width: 88px;
+  margin: auto;
+}
+
+.contact .social-box span .icon {
+  font-size: 40px;
+  color: var(--primary);
+}
+
+.contact .social-box h4 {
+  padding-top: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.contact .social-box ul li a,
+.contact .social-box ul li p {
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: 600;
+  color: var(--body-text);
+}
+
+.contact .social-box .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 68px;
+  padding-top: 50px;
+}
+
+/* contact form css */
+
+.contact-form-fields {
+  padding: 32px 24px;
+  margin-top: 24px;
+}
+
+.contact-form-fields .row {
+  --bs-gutter-y: 32px;
+}
+
+.contact-form-fields label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.contact-form-fields .input-fields {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--primary-text);
+  font-weight: 600;
+  font-size: 14px;
+  outline: none;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.contact-form-fields .input-fields:hover,
+.contact-form-fields .input-fields:focus {
+  border-color: var(--primary);
+}
+
+.contact-form-fields textarea.input-fields {
+  height: 110px;
+  resize: none;
+}
+
+.contact-form-fields .input-fields::placeholder {
+  font-weight: 600;
+  font-size: 14px;
+  color: #D9D9D9;
+}
+
+.contact-form-fields .custom-select .btn-main {
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: 0 10px;
+  height: 44px;
+}
+
+.contact-form-fields .custom-select button:focus .btn-main,
+.contact-form-fields .custom-select .btn-main:hover {
+  border-color: var(--primary);
+}
+
+
+.contact-form-fields .submit-btn {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 13px 0;
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .contact {
+    padding: 32px 0;
+  }
+
+  .contact .social-box .social-media {
+    gap: 32px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .contact {
+    padding: 32px 0;
+  }
+
+  .contact .social-box .social-media {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .contact {
+    padding: 32px 0;
+  }
+
+  .contact .row {
+    --bs-gutter-y: 16px
+  }
+  .contact .social-area{
+    margin-top: 0;
+  }
+
+  .contact .social-box .social-media {
+    gap: 40px;
+    padding: 28px 0;
+  }
+
+  .contact .social-box {
+    height: fit-content;
+  }
+
+  .contact-form-fields {
+    padding: 0;
+    margin-top: 16px;
+  }
+
+  .contact-form-fields .row {
+    --bs-gutter-y: 24px;
+  }
+  .contact-form-fields .submit-btn {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
+
+/*===========================================================
+address CSS
+=============================================================*/
+.address {
+  padding: 64px 0;
+}
+
+.address .address-card .image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.address .address-card .image img {
+  width: 100%;
+}
+
+.address .address-card h4 {
+  padding-bottom: 12px;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.address .address-card p {
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--primary-text2);
+}
+
+.address .address-card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 9px 38px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .address .address-card h4 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .address {
+    padding: 32px 0;
+  }
+
+  .address .address-row {
+    --bs-gutter-y: 16px;
+  }
+
+  .address .address-card h4 {
+    padding-bottom: 0;
+    font-size: 24px;
+  }
+
+  .address .address-card p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .address .address-card a {
+    width: 100%;
+    padding: 8px 38px;
+    font-size: 14px;
+    text-align: center;
+  }
+}

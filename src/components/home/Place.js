@@ -20,15 +20,13 @@ const Place = () => {
               <div className="grid">
                 {
                   places.map(place => 
-                    <div key={place.id} className={place.id === 2 ? 'column2a' : place.id === 3 ? 'column2b' : place.id === 4 ? 'column3' : 'column1' }>
-                      <div className="single-place">
-                        <Link to="property">
-                          <img src={place.image} className="img-fluid" alt=""/>
-                          <div className="overlay">
-                            <p>{place.name} <BiChevronRightCircle className='place-icon'/></p>
-                          </div>
-                        </Link>
-                      </div>
+                    <div key={place.id} className="single-place">
+                      <Link to="property">
+                        <img src={place.image} className="img-fluid" alt=""/>
+                        <div className="overlay">
+                          <p>{place.name} <BiChevronRightCircle className='place-icon'/></p>
+                        </div>
+                      </Link>
                     </div>
                   )
                 }

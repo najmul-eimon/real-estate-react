@@ -1,0 +1,124 @@
+[
+  {
+    "id": 0,
+    "name": "Luxury Villa in Rego park",
+    "category": "Appartment",
+    "price": 860000,
+    "location": "Belmont Gardens, Chicago",
+    "date": "September 26,2023",
+    "floor": 10,
+    "space": 759.9,
+    "bedRooms": 3,
+    "description": [
+      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR."
+    ],
+    "rating": 5,
+    "propertyDetails": {
+      "propertyId": 160,
+      "price": 300,
+      "propertySize": 500,
+      "propertyLotSize": 1000,
+      "rooms": 5,
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "customId": 7,
+      "garages": 1,
+      "yearBuilt": 1950,
+      "garageSize": 2,
+      "availableFrom": "2015-09-24",
+      "basement": "full",
+      "extraDetails": "pool",
+      "roofing": "new",
+      "exteriorMaterial": "brick",
+      "structureType": "Brick",
+      "floorsNo": 1
+    },
+    "floorPlans": [
+      {
+        "floor": "First",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/first.png"
+      },
+      {
+        "floor": "Second",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/second.png"
+      },
+      {
+        "floor": "Third",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/third.png"
+      },
+      {
+        "floor": "Top Garden",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/fourth.png"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Luxury Villa in Rego park",
+    "category": "Appartment",
+    "price": 860000,
+    "location": "Belmont Gardens, Chicago",
+    "date": "September 26,2023",
+    "floor": 10,
+    "space": 759.9,
+    "bedRooms": 3,
+    "description": [
+      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR."
+    ],
+    "rating": 5,
+    "propertyDetails": {
+      "propertyId": 160,
+      "price": 300,
+      "propertySize": 500,
+      "propertyLotSize": 1000,
+      "rooms": 5,
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "customId": 7,
+      "garages": 1,
+      "yearBuilt": 1950,
+      "garageSize": 2,
+      "availableFrom": "2015-09-24",
+      "basement": "full",
+      "extraDetails": "pool",
+      "roofing": "new",
+      "exteriorMaterial": "brick",
+      "structureType": "Brick",
+      "floorsNo": 1
+    },
+    "floorPlans": [
+      {
+        "floor": "First",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/first.png"
+      },
+      {
+        "floor": "Second",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/second.png"
+      },
+      {
+        "floor": "Third",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/third.png"
+      },
+      {
+        "floor": "Top Garden",
+        "details": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        "image": "../assets/images/floor-plans/fourth.png"
+      }
+    ]
+  }
+]

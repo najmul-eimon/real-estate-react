@@ -1,0 +1,389 @@
+/*===========================================================
+property details CSS
+=============================================================*/
+.property-details {
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+.property-details .title-area {
+  padding-bottom: 40px;
+}
+
+.property-details .property-title h2 {
+  padding-bottom: 16px;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--primary-text);
+}
+
+.property-details .property-title ul,
+.property-details .property-title ul li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.property-details .property-title ul {
+  gap: 10px;
+}
+
+.property-details .property-title ul li .icon {
+  font-size: 18px;
+  color: var(--primary-text2);
+}
+
+.property-details .property-title ul li p {
+  font-size: 16px;
+  color: var(--primary-text2);
+}
+
+.property-details .price h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--primary-text);
+}
+
+.property-details .details-images .img-row {
+  --bs-gutter-y: 24px;
+}
+.property-details .details-images .grid{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.property-details .details-images .single-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.property-details .details-images .single-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-details .details-images .grid .single-img:first-child{
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.property-details .details-box {
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  background-color: var(--white);
+  padding: 24px;
+  margin-top: 32px;
+}
+
+.property-details .details-title {
+  padding-bottom: 20px;
+}
+
+.property-details .details-title h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: var(--primary-text);
+  position: relative;
+}
+
+.property-details .details-title h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+.property-details .details-box p {
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+.property-details .details-box p:not(:last-child) {
+  padding-bottom: 24px;
+}
+
+.property-details .details-box .nav-tabs {
+  justify-content: center;
+  gap: 32px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.property-details .details-box .nav-tabs .nav-link {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--primary-text);
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  position: relative;
+}
+
+.property-details .details-box .nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--primary);
+}
+
+.property-details .details-box .tab-content .image {
+  height: 340px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #E7E7E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-details .details-box .tab-content .text {
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  background-color: rgba(22, 163, 173, 0.07);
+  min-height: 340px;
+}
+
+.property-details .details-box .tab-content .text h4 {
+  font-size: 24px;
+  color: var(--primary-text);
+  padding-bottom: 20px;
+}
+
+.property-details .details-box .video {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.property-details .details-box .video img {
+  width: 100%;
+}
+
+.property-details .details-box .video .overlay {
+  background: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-details .details-box .video .overlay a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 4px solid var(--white);
+  position: relative;
+}
+
+.property-details .details-box .video .overlay a::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: ripple;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+.property-details .details-box .property-details-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, 1fr);
+}
+.property-details .details-box .location {
+  border-radius: 8px;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.property-details .details-box .location iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:1200px) and (max-width:1399px) {
+  .property-details .details-box .tab-content .text p{
+    font-size: 15px;
+  }
+}
+@media (min-width:992px) and (max-width:1199px) {
+  .property-details .details-images .right-part-img {
+    margin-top: 24px;
+  }
+}
+@media (min-width:768px) and (max-width:1199px) {
+  .property-details {
+    padding: 32px 0;
+  }
+  
+
+  .property-details .details-box .detail-row {
+    --bs-gutter-y: 20px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  
+  .property-details .property-title h2,
+  .property-details .price h3 {
+    font-size: 30px;
+  }
+
+  .property-details .details-box .tab-content .text {
+    min-height: fit-content;
+  }
+}
+
+
+
+@media screen and (max-width:767px) {
+  .property-details {
+    padding: 32px 0;
+  }
+  
+  .property-details .property-title h2 {
+    font-size: 20px;
+    padding-bottom: 12px;
+  }
+
+  .property-details .property-title ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .property-details .price {
+    text-align: left !important;
+    padding-top: 16px;
+  }
+
+  .property-details .price h3 {
+    font-size: 24px;
+  }
+
+  .property-details .details-images .right-part-img {
+    margin-top: 24px;
+  }
+
+  .property-details .details-box {
+    margin-top: 24px;
+  }
+
+  .property-details .details-title h4 {
+    font-size: 20px;
+  }
+
+  .property-details .details-box p {
+    font-size: 14px;
+  }
+
+  .property-details .details-box .nav-tabs {
+    column-gap: 14px;
+    row-gap: 8px;
+  }
+
+  .property-details .details-box .nav-tabs .nav-link {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .property-details .details-box .tab-content .text {
+    min-height: fit-content;
+  }
+
+  .property-details .details-box .detail-row {
+    --bs-gutter-y: 20px;
+  }
+
+  .property-details .details-box .tab-content .image {
+    height: 250px;
+  }
+
+  .property-details .details-box .video .overlay a {
+    height: 32px;
+    width: 32px;
+    border-width: 3px;
+  }
+
+  .property-details .details-box .video .overlay a::before {
+    height: 32px;
+    width: 32px;
+    top: -3px;
+    left: -3px;
+  }
+
+  .property-details .details-box .video .overlay a i {
+    font-size: 14px;
+  }
+
+  .property-details .details-box .location {
+    height: 160px;
+  }
+
+}
+
+@media screen and (max-width:575px) {
+  .property-details {
+    padding-top: 24px;
+  }
+}
+
+/*===========================================================
+related properties CSS
+=============================================================*/
+.related-properties {
+  padding-top: 0;
+}
+
+.related-properties .title {
+  padding-bottom: 0;
+}
+
+.related-properties .title h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.related-properties .title h2::after {
+  width: 32px;
+}
+
+.related-properties .related-property-slider {
+  padding: 24px 12px;
+}
+
+@media screen and (max-width:575px) {
+  .related-properties .title h2::after {
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

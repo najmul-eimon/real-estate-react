@@ -12,7 +12,7 @@ const Filter = () => {
   const [showRoom, setShowRoom] = useState(false);
   const [showFeature, setShowFeature] = useState(false);
 
-  const [location, setlocation] = useState("Select Location");
+  const [location, setLocation] = useState("Select Location");
   const [type, setType] = useState("Property Type");
   const [category, setCategory] = useState("All Category");
   const [status, setStatus] = useState("Select Status");
@@ -70,7 +70,7 @@ const Filter = () => {
                   <div className="btn-dropdown">
                     {locations.map((location, index) => (
                       <p onClick={() => {
-                          setlocation(location);
+                          setLocation(location);
                           setShowLocation(!showLocation);
                         }}
                         key={index}

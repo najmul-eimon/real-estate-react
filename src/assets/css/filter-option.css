@@ -2,7 +2,7 @@
 Select CSS
 =============================================================*/
 
-.filter-content .custom-select .select-btn {
+.custom-select .select-btn {
   border: 0;
   outline: none;
   background-color: transparent;
@@ -10,7 +10,7 @@ Select CSS
   position: relative;
 }
 
-.filter-content .custom-select .btn-main {
+.custom-select .btn-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,16 +24,16 @@ Select CSS
   border-bottom: 1px solid var(--body-text);
 }
 
-.filter-content .custom-select .rotate {
+.custom-select .rotate {
   transform: rotate(180deg);
 }
 
-.filter-content .custom-select .arrow-icon {
+.custom-select .arrow-icon {
   font-size: 18px;
   color: var(--body-text1);
 }
 
-.filter-content .custom-select .btn-dropdown {
+.custom-select .btn-dropdown {
   max-height: 200px;
   position: absolute;
   z-index: 50;
@@ -48,7 +48,7 @@ Select CSS
   border-radius: 6px;
 }
 
-.filter-content .custom-select .btn-dropdown p {
+.custom-select .btn-dropdown p {
   padding: 9px 40px 9px 16px;
   background: #FFFFFF;
   border-radius: 5px;
@@ -57,32 +57,32 @@ Select CSS
   text-align: left;
 }
 
-.filter-content .custom-select .btn-dropdown p:hover {
+.custom-select .btn-dropdown p:hover {
   background-color: rgba(22, 163, 173, 0.1);
   color: var(--primary);
 }
 
-.filter-content .custom-select .btn-dropdown::-webkit-scrollbar {
+.custom-select .btn-dropdown::-webkit-scrollbar {
   width: 5px;
 }
 
-.filter-content .custom-select .btn-dropdown::-moz-scrollbar {
+.custom-select .btn-dropdown::-moz-scrollbar {
   width: 5px;
 }
 
-.filter-content .custom-select .btn-dropdown::-webkit-scrollbar-track {
+.custom-select .btn-dropdown::-webkit-scrollbar-track {
   background-color: #F4F4F4;
 }
 
-.filter-content .custom-select .btn-dropdown::-moz-scrollbar-track {
+.custom-select .btn-dropdown::-moz-scrollbar-track {
   background-color: #F4F4F4;
 }
 
-.filter-content .custom-select .btn-dropdown::-webkit-scrollbar-thumb {
+.custom-select .btn-dropdown::-webkit-scrollbar-thumb {
   background: var(--primary);
 }
 
-.filter-content .custom-select .btn-dropdown::-moz-scrollbar-thumb {
+.custom-select .btn-dropdown::-moz-scrollbar-thumb {
   background: var(--primary);
 }
 

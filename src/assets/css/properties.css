@@ -1,0 +1,338 @@
+/*===========================================================
+properties CSS
+=============================================================*/
+.properties {
+  padding: 64px 0;
+}
+
+.properties .nav {
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.properties .nav-tabs {
+  border: 0;
+}
+
+.properties .nav-tabs .nav-link {
+  border-radius: 0;
+  border: 0;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.properties .nav-tabs .nav-link .view-icon {
+  font-size: 30px;
+  color: var(--body-text);
+}
+
+.properties .nav-tabs .nav-link.active .view-icon {
+  color: var(--primary);
+}
+
+.properties .filter-btn-list {
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: -32px;
+  margin-bottom: 32px;
+  width: fit-content;
+}
+
+.properties .filter-btn-list button {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--body-text);
+  padding: 8px 16px;
+  border-radius: 2px;
+  background-color: #F5F5F5;
+}
+
+.properties .filter-btn-list button:hover {
+  background-color: #E2F3F4;
+  color: var(--primary);
+}
+
+.properties .filter-btn-list .active button {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.properties .filter-btn-list button::after {
+  display: none;
+}
+
+.properties .filter-btn-list .filter-dropdown {
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  z-index: 50;
+  min-width: 195px;
+  background-color: var(--white);
+}
+
+.properties .filter-btn-list .dropdown-item {
+  font-size: 14px;
+  color: var(--body-text);
+  padding: 9px 16px;
+  background-color: var(--white);
+}
+
+.properties .filter-btn-list .dropdown-item:hover {
+  background-color: rgba(22, 163, 173, 0.1);
+  color: var(--primary);
+}
+
+.properties .property-cards.row {
+  --bs-gutter-y: 32px;
+}
+
+.properties .single-property {
+  -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
+  border-radius: 12px;
+  background-color: var(--white);
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.properties .list-view .single-property {
+  border-radius: 14px;
+  text-align: left;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.properties .single-property .item-wrapper {
+  padding: 32px 28px 24px 28px;
+}
+
+.properties .single-property h3 {
+  font-size: 20px;
+  color: var(--primary-text);
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+
+.properties .list-view .single-property:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.properties .list-view .single-property h3 {
+  padding-bottom: 16px;
+}
+
+.properties .list-view .single-property .feature {
+  max-width: 361px;
+  padding: 24px 0 20px 0;
+}
+
+.properties .single-property h5 {
+  font-size: 16px;
+  color: var(--primary);
+  font-weight: 900;
+  padding-top: 8px;
+}
+
+.properties .single-property p {
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+.properties .single-property .desc {
+  padding: 0 14px;
+}
+
+.properties .single-property .image {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.properties .single-property .image img {
+  width: 100%;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+.properties .single-property:hover .image img{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.properties .list-view .single-property .image {
+  margin: 0;
+  width: 360px;
+  flex-shrink: 0;
+}
+
+
+.properties .single-property .buttons {
+  gap: 2px;
+  background-color: #EFEFEF;
+}
+
+.properties .list-view .single-property .buttons {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+}
+
+.properties .single-property a,
+.properties .single-property button {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  color: var(--body-text);
+  padding: 15px 0;
+  background-color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.properties .single-property a:hover,
+.properties .single-property button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.properties .pagination {
+  margin-top: 40px;
+}
+
+.properties .pagination li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: var(--body-text);
+  background-color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.properties .pagination li a i::before {
+  font-weight: 700;
+}
+
+.properties .pagination li a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .properties {
+    padding: 32px 0;
+  }
+
+  .properties .single-property h3 {
+    font-size: 18px;
+  }
+
+  .properties .list-view .single-property .image {
+    width: 400px;
+  }
+
+  .properties .single-property .item-wrapper {
+    padding: 32px 24px 24px 24px;
+  }
+
+  .properties .single-property a,
+  .properties .single-property button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .properties {
+    padding: 32px 0;
+  }
+
+  .properties .single-property h3 {
+    font-size: 18px;
+  }
+
+  .properties .list-view .single-property {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .properties .single-property a,
+  .properties .single-property button {
+    font-size: 16px;
+  }
+
+  .properties .list-view .single-property p {
+    font-size: 14px;
+  }
+
+  .properties .list-view .single-property .image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .properties {
+    padding: 32px 0;
+  }
+
+  .properties .nav-tabs {
+    display: none;
+  }
+
+  .properties .filter-btn-list {
+    margin-top: 0;
+    margin-bottom: 24px;
+    justify-content: center;
+  }
+
+  .properties .property-cards.row {
+    --bs-gutter-y: 24px;
+  }
+
+  .properties .pagination {
+    margin-top: 16px;
+    justify-content: center !important;
+  }
+  .properties .pagination li a {
+    height: 44px;
+    width: 44px;
+    font-size: 16px;
+  }
+
+  .properties .single-property .item-wrapper {
+    padding: 32px 15px 16px 15px;
+  }
+
+  .properties .single-property h3 {
+    font-size: 16px;
+    padding-bottom: 16px;
+  }
+
+  .properties .single-property p {
+    font-size: 14px;
+  }
+
+  .properties .single-property .image {
+    margin: 16px 0;
+  }
+
+  .properties .single-property a,
+  .properties .single-property button {
+    padding: 11px 0;
+    font-size: 16px;
+  }
+}
