@@ -7,6 +7,8 @@ import '../../assets/css/common.css';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const categories = ["appartment","villa","house","duplexes","family-house"];
+
   return (
     <header>
       <section className="navigation">
@@ -15,9 +17,9 @@ const Navbar = () => {
             <div className="col-md-12">
               <div className="row align-items-center">
                 <div className="col-7 col-md-4 col-lg-3 col-xl-2">
-                  <a className="navbar-brand" href="index.html">
+                  <Link className="navbar-brand" to="/">
                     <img src={logo} alt=""/>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-5 col-md-8 col-lg-9 col-xl-10">
                   <div className="d-flex align-items-center justify-content-end">
@@ -30,9 +32,9 @@ const Navbar = () => {
 
                   <div className={showNav ? 'main-nav show-nav' : 'main-nav'}>
                     <div className="mobile-header">
-                      <a className="navbar-brand" href="index.html">
+                      <Link className="navbar-brand" to="/">
                         <img src="assets/images/logo.png" alt=""/>
-                      </a>
+                      </Link>
 
                       <button type="button" id="close-nav" onClick={() => setShowNav(false)}>
                         <IoMdClose/>
@@ -47,11 +49,9 @@ const Navbar = () => {
                           Property <BsChevronDown/>
                         </NavLink>
                         <ul className="dropdown-submenu custom-scrollbar">
-                          <li><Link className="dropdown-item" to="property">Appartment</Link></li>
-                          <li><Link className="dropdown-item" to="property">Villa</Link></li>
-                          <li><Link className="dropdown-item" to="property">House</Link></li>
-                          <li><Link className="dropdown-item" to="property">Duplexes</Link></li>
-                          <li><Link className="dropdown-item" to="property">Family House</Link></li>
+                          {
+                            categories.map((category, index) => <li key={index}><Link className="dropdown-item" to={`/property/${category}`}>{category.split("-").join(" ")}</Link></li>)
+                          }
                         </ul>
                       </li>
                       <li className="nav-item">

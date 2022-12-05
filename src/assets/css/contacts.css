@@ -155,7 +155,8 @@ contact CSS
   .contact .row {
     --bs-gutter-y: 16px
   }
-  .contact .social-area{
+
+  .contact .social-area {
     margin-top: 0;
   }
 
@@ -176,6 +177,7 @@ contact CSS
   .contact-form-fields .row {
     --bs-gutter-y: 24px;
   }
+
   .contact-form-fields .submit-btn {
     font-size: 14px;
     padding: 8px 0;
@@ -226,6 +228,10 @@ address CSS
 @media (min-width:768px) and (max-width:991px) {
   .address .address-card h4 {
     font-size: 24px;
+  }
+
+  .address .address-card a {
+    font-size: 16px;
   }
 }
 

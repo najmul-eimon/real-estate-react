@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import linkedin from '../../assets/images/svg/linkedin.svg';
 import twitter from '../../assets/images/svg/twitter.svg';
 import facebook from '../../assets/images/svg/facebook.svg';
-import {BsChevronDown, BsEnvelopeOpen} from 'react-icons/bs';
+import {BsEnvelopeOpen} from 'react-icons/bs';
 import {FiPhoneCall} from 'react-icons/fi';
+import ContactForm from './ContactForm';
 import '../../assets/css/filter-option.css';
 import '../../assets/css/contacts.css';
 
 const Contact = () => {
-  const [showService, setShowService] = useState(false);
-  const [service, setService] = useState("Select");
-  const services = ["Single House", "Duplex House", "Premiun Villa"];
 
   return (
     <section className="contact">
@@ -62,63 +60,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-xl-8 offset-xl-2">
-            <form action="#">
-              <div className="contact-form-fields">
-                <div className="row">
-                  <div className="col-md-6">
-                    <label htmlFor="name">Enter Your name</label>
-                    <input type="text" placeholder="Enter Your name" className="input-fields" id="name"/>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="email">Email address</label>
-                    <input type="text" placeholder="Enter Email address" className="input-fields" id="email"/>
-                  </div>
-                  <div className="col-md-6">
-                    <label htmlFor="email">Phone Number</label>
-                    <input type="tel" placeholder="Enter Phone Number" className="input-fields" id="phone"/>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="custom-select">
-                      <label>Select Service Type</label>
-                      <button
-                        type="button"
-                        className="select-btn"
-                        onBlur={() => setShowService(false)}
-                        onClick={() => setShowService(!showService)}
-                      >
-                        <div className="btn-main">
-                          {service}
-                          <span className={showService ? 'rotate' : ''}>
-                            <BsChevronDown className="arrow-icon" />
-                          </span>
-                        </div>
-                        {showService && (
-                          <div className="btn-dropdown">
-                            {services.map((service, index) => (
-                              <p onClick={() => {
-                                  setService(service);
-                                  setShowService(!showService);
-                                }}
-                                key={index}
-                              >
-                                {service}
-                              </p>
-                            ))}
-                          </div>
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-md-12">
-                    <label htmlFor="message">Massage</label>
-                    <textarea id="message" className="input-fields"></textarea>
-                  </div>
-                  <div className="col-md-12">
-                    <button type="submit" className="submit-btn btn-style">Send</button>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <ContactForm/>
           </div>
         </div>
       </div>

@@ -47,7 +47,8 @@ property details CSS
 .property-details .details-images .img-row {
   --bs-gutter-y: 24px;
 }
-.property-details .details-images .grid{
+
+.property-details .details-images .grid {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(3, 1fr);
@@ -64,7 +65,7 @@ property details CSS
   object-fit: cover;
 }
 
-.property-details .details-images .grid .single-img:first-child{
+.property-details .details-images .grid .single-img:first-child {
   grid-row: 1/3;
   grid-column: 1/3;
 }
@@ -184,7 +185,7 @@ property details CSS
   justify-content: center;
 }
 
-.property-details .details-box .video .overlay a {
+.property-details .details-box .video .overlay button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +198,7 @@ property details CSS
   position: relative;
 }
 
-.property-details .details-box .video .overlay a::before {
+.property-details .details-box .video .overlay button::before {
   content: '';
   position: absolute;
   top: -4px;
@@ -211,12 +212,14 @@ property details CSS
   animation-delay: 0;
   animation-iteration-count: infinite;
 }
-.property-details .details-box .property-details-list{
+
+.property-details .details-box .property-details-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: column;
   grid-template-rows: repeat(6, 1fr);
 }
+
 .property-details .details-box .location {
   border-radius: 8px;
   width: 100%;
@@ -230,31 +233,35 @@ property details CSS
 }
 
 @media (min-width:1200px) and (max-width:1399px) {
-  .property-details .details-box .tab-content .text p{
+  .property-details .details-box .tab-content .text p {
     font-size: 15px;
   }
 }
+
 @media (min-width:992px) and (max-width:1199px) {
   .property-details .details-images .right-part-img {
     margin-top: 24px;
   }
+
+  .property-details .details-images .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+
 }
+
 @media (min-width:768px) and (max-width:1199px) {
   .property-details {
     padding: 32px 0;
   }
-  
+
 
   .property-details .details-box .detail-row {
     --bs-gutter-y: 20px;
   }
-}
 
-@media (min-width:768px) and (max-width:991px) {
-  
-  .property-details .property-title h2,
-  .property-details .price h3 {
-    font-size: 30px;
+  .property-details .details-box .property-details-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
   }
 
   .property-details .details-box .tab-content .text {
@@ -262,13 +269,24 @@ property details CSS
   }
 }
 
+@media (min-width:768px) and (max-width:991px) {
 
+  .property-details .property-title h2,
+  .property-details .price h3 {
+    font-size: 30px;
+  }
 
+}
+@media (min-width:576px) and (max-width:767px) {
+  .property-details .details-images .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+}
 @media screen and (max-width:767px) {
   .property-details {
     padding: 32px 0;
   }
-  
+
   .property-details .property-title h2 {
     font-size: 20px;
     padding-bottom: 12px;
@@ -304,6 +322,11 @@ property details CSS
     font-size: 14px;
   }
 
+  .property-details .details-box .property-details-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+  }
+
   .property-details .details-box .nav-tabs {
     column-gap: 14px;
     row-gap: 8px;
@@ -326,20 +349,20 @@ property details CSS
     height: 250px;
   }
 
-  .property-details .details-box .video .overlay a {
+  .property-details .details-box .video .overlay button {
     height: 32px;
     width: 32px;
     border-width: 3px;
   }
 
-  .property-details .details-box .video .overlay a::before {
+  .property-details .details-box .video .overlay button::before {
     height: 32px;
     width: 32px;
     top: -3px;
     left: -3px;
   }
 
-  .property-details .details-box .video .overlay a i {
+  .property-details .details-box .video .overlay button .play-icon {
     font-size: 14px;
   }
 
@@ -352,6 +375,13 @@ property details CSS
 @media screen and (max-width:575px) {
   .property-details {
     padding-top: 24px;
+  }
+  .property-details .details-images .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }  
+  .property-details .details-images .grid .single-img:first-child {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
 }
 

@@ -10,6 +10,8 @@ import logo4 from "../../assets/images/partner/logo4.png";
 import '../../assets/css/partner.css';
 
 const Partner = () => {
+  const partners = [logo1, logo2, logo3, logo4];
+
   return (
     <section className="partner">
       <div className="container">
@@ -38,26 +40,15 @@ const Partner = () => {
                 }
               }} 
               className="partner-slider">
-              <SwiperSlide>
-                <div className="item">
-                  <img src={logo1} alt="" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="item">
-                  <img src={logo2} alt="" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="item">
-                  <img src={logo3} alt="" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="item">
-                  <img src={logo4} alt="" />
-                </div>
-              </SwiperSlide>
+                {
+                  partners.map((item, index) => 
+                    <SwiperSlide key={index}>
+                      <div className="item">
+                        <img src={item} alt="" />
+                      </div>
+                    </SwiperSlide>
+                  )
+                }
             </Swiper>
           </div>
         </div>

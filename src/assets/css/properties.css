@@ -1,20 +1,22 @@
 /*===========================================================
 properties CSS
 =============================================================*/
-.properties {
+.properties,
+.property-page {
   padding: 64px 0;
 }
 
-.properties .nav {
+/*==================== tab =================*/
+.all-properties .nav {
   justify-content: flex-end;
   gap: 16px;
 }
 
-.properties .nav-tabs {
+.all-properties .nav-tabs {
   border: 0;
 }
 
-.properties .nav-tabs .nav-link {
+.all-properties .nav-tabs .nav-link {
   border-radius: 0;
   border: 0;
   height: 32px;
@@ -25,47 +27,45 @@ properties CSS
   justify-content: center;
 }
 
-.properties .nav-tabs .nav-link .view-icon {
+.all-properties .nav-tabs .nav-link .view-icon {
   font-size: 30px;
   color: var(--body-text);
 }
 
-.properties .nav-tabs .nav-link.active .view-icon {
+.all-properties .nav-tabs .nav-link.active .view-icon {
   color: var(--primary);
 }
 
-.properties .filter-btn-list {
+/*==================== filter button =================*/
+.all-properties .filter-btn-list {
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: -32px;
+  margin-top: -46px;
   margin-bottom: 32px;
   width: fit-content;
 }
 
-.properties .filter-btn-list button {
+.all-properties .filter-btn-list button {
   font-size: 14px;
   font-weight: 600;
   color: var(--body-text);
   padding: 8px 16px;
   border-radius: 2px;
   background-color: #F5F5F5;
+  text-transform: capitalize;
 }
 
-.properties .filter-btn-list button:hover {
+.all-properties .filter-btn-list button:hover {
   background-color: #E2F3F4;
   color: var(--primary);
 }
 
-.properties .filter-btn-list .active button {
-  background-color: var(--primary);
-  color: var(--white);
-}
 
-.properties .filter-btn-list button::after {
+.all-properties .filter-btn-list button::after {
   display: none;
 }
 
-.properties .filter-btn-list .filter-dropdown {
+.all-properties .filter-btn-list .filter-dropdown {
   border-radius: 6px;
   -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
   box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
@@ -78,23 +78,33 @@ properties CSS
   background-color: var(--white);
 }
 
-.properties .filter-btn-list .dropdown-item {
+.all-properties .filter-btn-list .filter-dropdown button {
   font-size: 14px;
   color: var(--body-text);
   padding: 9px 16px;
   background-color: var(--white);
+  width: 100%;
+  text-align: left;
 }
 
-.properties .filter-btn-list .dropdown-item:hover {
+.all-properties .filter-btn-list .filter-dropdown button:hover {
   background-color: rgba(22, 163, 173, 0.1);
   color: var(--primary);
 }
 
-.properties .property-cards.row {
+.all-properties .filter-btn-list button.active,
+.all-properties .filter-btn-list .filter-dropdown button.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+
+/*==================== single property =================*/
+.all-properties .property-cards.row {
   --bs-gutter-y: 32px;
 }
 
-.properties .single-property {
+.all-properties .single-property {
   -webkit-box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
   box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
   border-radius: 12px;
@@ -104,7 +114,7 @@ properties CSS
   overflow: hidden;
 }
 
-.properties .list-view .single-property {
+.all-properties .list-view .single-property {
   border-radius: 14px;
   text-align: left;
   padding: 32px;
@@ -113,83 +123,83 @@ properties CSS
   gap: 24px;
 }
 
-.properties .single-property .item-wrapper {
+.all-properties .single-property .item-wrapper {
   padding: 32px 28px 24px 28px;
 }
 
-.properties .single-property h3 {
+.all-properties .single-property h3 {
   font-size: 20px;
   color: var(--primary-text);
   font-weight: 700;
   padding-bottom: 24px;
 }
 
-.properties .list-view .single-property:not(:last-child) {
+.all-properties .list-view .single-property:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.properties .list-view .single-property h3 {
+.all-properties .list-view .single-property h3 {
   padding-bottom: 16px;
 }
 
-.properties .list-view .single-property .feature {
+.all-properties .list-view .single-property .feature {
   max-width: 361px;
   padding: 24px 0 20px 0;
 }
 
-.properties .single-property h5 {
+.all-properties .single-property h5 {
   font-size: 16px;
   color: var(--primary);
   font-weight: 900;
   padding-top: 8px;
 }
 
-.properties .single-property p {
+.all-properties .single-property p {
   font-size: 16px;
   color: var(--body-text);
 }
 
-.properties .single-property .desc {
+.all-properties .single-property .desc {
   padding: 0 14px;
 }
 
-.properties .single-property .image {
+.all-properties .single-property .image {
   border-radius: 4px;
   overflow: hidden;
   margin: 24px 0;
 }
 
-.properties .single-property .image img {
+.all-properties .single-property .image img {
   width: 100%;
   -webkit-transition: all ease-in-out 0.6s;
   transition: all ease-in-out 0.6s;
 }
 
-.properties .single-property:hover .image img{
+.all-properties .single-property:hover .image img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.properties .list-view .single-property .image {
+.all-properties .list-view .single-property .image {
   margin: 0;
   width: 360px;
   flex-shrink: 0;
 }
 
 
-.properties .single-property .buttons {
+.all-properties .single-property .buttons {
   gap: 2px;
   background-color: #EFEFEF;
 }
 
-.properties .list-view .single-property .buttons {
+.all-properties .list-view .single-property .buttons {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   overflow: hidden;
 }
 
-.properties .single-property a,
-.properties .single-property button {
+.all-properties .single-property a,
+.all-properties .single-property button {
   display: inline-block;
   text-align: center;
   width: 50%;
@@ -200,17 +210,28 @@ properties CSS
   font-weight: 600;
 }
 
-.properties .single-property a:hover,
-.properties .single-property button:hover {
+.all-properties .single-property a:hover,
+.all-properties .single-property button:hover {
   background-color: var(--primary);
   color: var(--white);
 }
 
-.properties .pagination {
+/*==================== property pagination =================*/
+.all-properties .paginate {
   margin-top: 40px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.properties .pagination li a {
+.all-properties .paginate .previous a,
+.all-properties .paginate .next a,
+.all-properties .paginate .break a {
+  border: 0;
+}
+
+.all-properties .paginate li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,114 +245,128 @@ properties CSS
   text-align: center;
 }
 
-.properties .pagination li a i::before {
-  font-weight: 700;
-}
-
-.properties .pagination li a.active {
+.all-properties .paginate .selected a {
   background-color: var(--primary);
   color: var(--white);
 }
 
+
+.all-properties .paginate .previous a {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 16.25L6.25 10L12.5 3.75' stroke='%235C727D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.all-properties .paginate .next a {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 3.75L13.75 10L7.5 16.25' stroke='%235C727D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*==================== responsive =================*/
 @media (min-width:992px) and (max-width:1199px) {
-  .properties {
+  .properties,
+  .property-page {
     padding: 32px 0;
   }
 
-  .properties .single-property h3 {
+  .all-properties .single-property h3 {
     font-size: 18px;
   }
 
-  .properties .list-view .single-property .image {
+  .all-properties .list-view .single-property .image {
     width: 400px;
   }
 
-  .properties .single-property .item-wrapper {
+  .all-properties .single-property .item-wrapper {
     padding: 32px 24px 24px 24px;
   }
 
-  .properties .single-property a,
-  .properties .single-property button {
+  .all-properties .single-property a,
+  .all-properties .single-property button {
     font-size: 16px;
   }
 }
 
 @media (min-width:768px) and (max-width:991px) {
-  .properties {
+  .properties,
+  .property-page {
     padding: 32px 0;
   }
 
-  .properties .single-property h3 {
+  .all-properties .single-property h3 {
     font-size: 18px;
   }
 
-  .properties .list-view .single-property {
+  .all-properties .list-view .single-property {
     padding: 20px;
     gap: 20px;
   }
 
-  .properties .single-property a,
-  .properties .single-property button {
+  .all-properties .single-property a,
+  .all-properties .single-property button {
     font-size: 16px;
   }
 
-  .properties .list-view .single-property p {
+  .all-properties .list-view .single-property p {
     font-size: 14px;
   }
 
-  .properties .list-view .single-property .image {
+  .all-properties .list-view .single-property .image {
     width: 50%;
   }
 }
 
 @media screen and (max-width:767px) {
-  .properties {
+  .properties,
+  .property-page {
     padding: 32px 0;
   }
 
-  .properties .nav-tabs {
+  .all-properties .nav-tabs {
     display: none;
   }
 
-  .properties .filter-btn-list {
+  .all-properties .filter-btn-list {
     margin-top: 0;
     margin-bottom: 24px;
     justify-content: center;
   }
 
-  .properties .property-cards.row {
+  .all-properties .property-cards.row {
     --bs-gutter-y: 24px;
   }
 
-  .properties .pagination {
+  .all-properties .paginate {
     margin-top: 16px;
     justify-content: center !important;
   }
-  .properties .pagination li a {
+
+  .all-properties .paginate li a {
     height: 44px;
     width: 44px;
     font-size: 16px;
   }
 
-  .properties .single-property .item-wrapper {
+  .all-properties .single-property .item-wrapper {
     padding: 32px 15px 16px 15px;
   }
 
-  .properties .single-property h3 {
+  .all-properties .single-property h3 {
     font-size: 16px;
     padding-bottom: 16px;
   }
 
-  .properties .single-property p {
+  .all-properties .single-property p {
     font-size: 14px;
   }
 
-  .properties .single-property .image {
+  .all-properties .single-property .image {
     margin: 16px 0;
   }
 
-  .properties .single-property a,
-  .properties .single-property button {
+  .all-properties .single-property a,
+  .all-properties .single-property button {
     padding: 11px 0;
     font-size: 16px;
   }

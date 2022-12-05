@@ -169,12 +169,14 @@ filter properties CSS
   align-items: center;
   justify-content: center;
   gap: 6px;
+  padding-top: 8px;
 }
 
 .filter-main .range-value p {
   font-weight: 700;
   font-size: 16px;
   color: var(--body-text2);
+  padding-top: 0;
 }
 
 .filter-main .filter-buttons {

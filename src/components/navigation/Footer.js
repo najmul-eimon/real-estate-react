@@ -1,9 +1,11 @@
 import React from 'react';
-import '../../assets/css/common.css';
 import footerLogo from '../../assets/images/footer-logo.png';
 import footerLogoWhite from '../../assets/images/footer-logo-white.png';
-import {FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube} from 'react-icons/fa';
+import {FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaRegEnvelope} from 'react-icons/fa';
+import {IoCallOutline} from 'react-icons/io5';
+import {FiMapPin} from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import '../../assets/css/common.css';
 
 const Footer = () => {
   return (
@@ -21,11 +23,11 @@ const Footer = () => {
                   </Link>
                   <p className="about">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam. Lorem ipsum dolor sit amet consecteturr adipiscing elit aliquam</p>
                   <ul className="footer-social d-flex align-items-center">
-                    <li><a href="#!"><FaFacebookF/></a></li>
-                    <li><a href="#!"><FaTwitter/></a></li>
-                    <li><a href="#!"><FaInstagram/></a></li>
-                    <li><a href="#!"><FaLinkedinIn/></a></li>
-                    <li><a href="#!"><FaYoutube/></a></li>
+                    <li><a href="#!"><FaFacebookF className="social-icon"/></a></li>
+                    <li><a href="#!"><FaTwitter className="social-icon"/></a></li>
+                    <li><a href="#!"><FaInstagram className="social-icon"/></a></li>
+                    <li><a href="#!"><FaLinkedinIn className="social-icon"/></a></li>
+                    <li><a href="#!"><FaYoutube className="social-icon"/></a></li>
                   </ul>
                 </div>
               </div>
@@ -63,15 +65,15 @@ const Footer = () => {
                 </div>
                 <ul className="footer-address">
                   <li>
-                    <i className="ph-envelope-simple"></i>
+                    <FaRegEnvelope className='address-icon'/>
                     <p>mycompany@mail.com</p>
                   </li>
                   <li>
-                    <i className="ph-phone"></i>
+                    <IoCallOutline className='address-icon'/>
                     <p>(589) 487 - 5892</p>
                   </li>
                   <li>
-                    <i className="ph-map-pin"></i>
+                    <FiMapPin className='address-icon'/>
                     <ul>
                       <li><p>1545 Broadway</p></li>
                       <li><p>New York, NY 10036</p></li>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "../../assets/css/filter-option.css";
 import {BsChevronDown, BsSliders} from 'react-icons/bs';
+import {FiSearch} from 'react-icons/fi';
 import MultiRangeSlider from "multi-range-slider-react";
+import "../../assets/css/filter-option.css";
 
-const Filter = () => {
+const Filter = ({data}) => {
   const [showLocation, setShowLocation] = useState(false);
   const [showTypes, setShowTypes] = useState(false);
   const [showCategory, setShowCategory] = useState(false);
@@ -51,7 +52,7 @@ const Filter = () => {
       <div className="filter-content top-content">
         <div className="row filter-row align-items-center">
           {/* location */}
-          <div className="col-sm-6 col-lg-3">
+          <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
             <div className="custom-select">
               <h4>Location</h4>
               <button
@@ -85,7 +86,7 @@ const Filter = () => {
           </div>
 
           {/* type */}
-          <div className="col-sm-6 col-lg-3">
+          <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
             <div className="custom-select">
               <h4>Type</h4>
               <button
@@ -119,7 +120,7 @@ const Filter = () => {
           </div>
 
           {/* category */}
-          <div className="col-sm-6 col-lg-3">
+          <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
             <div className="custom-select">
               <h4>Category</h4>
               <button
@@ -153,13 +154,13 @@ const Filter = () => {
           </div>
 
           {/* filter and search button */}
-          <div className="col-sm-6 col-lg-3 order-1 order-sm-0">
+          <div className={data === "sidebar" ? "col-sm-12 order-1" : "col-sm-6 col-lg-3 order-1 order-sm-0"}>
             <div className="filter-buttons d-flex align-items-center">
               <button type="button" id="moreFilters" className="filter" onClick={() => setShowMoreFilters(!showMoreFilters)}>
                 Filter <BsSliders className="filter-icon"/>
               </button>
               <button type="button" className="search btn-style">
-                Search
+                Search <FiSearch className={data === "sidebar" ? "search-icon" : "search-icon d-none"}/>
               </button>
             </div>
           </div>
@@ -168,7 +169,7 @@ const Filter = () => {
             <div className={showMoreFilters ? 'bottom-content show':'bottom-content'}>
               <div className="row filter-row">
                 {/* status */}
-                <div className="col-sm-6 col-lg-3">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
                   <div className="custom-select">
                     <h4>Status</h4>
                     <button
@@ -202,7 +203,7 @@ const Filter = () => {
                 </div>
 
                 {/* city */}
-                <div className="col-sm-6 col-lg-3">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
                   <div className="custom-select">
                     <h4>City</h4>
                     <button
@@ -236,7 +237,7 @@ const Filter = () => {
                 </div>
 
                 {/* room */}
-                <div className="col-sm-6 col-lg-3">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
                   <div className="custom-select">
                     <h4>Room</h4>
                     <button
@@ -270,7 +271,7 @@ const Filter = () => {
                 </div>
 
                 {/* feature */}
-                <div className="col-sm-6 col-lg-3">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6 col-lg-3"}>
                   <div className="custom-select">
                     <h4>Feature</h4>
                     <button
@@ -304,7 +305,7 @@ const Filter = () => {
                 </div>
 
                 {/* price range */}
-                <div className="col-sm-6">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6"}>
                   <h4>Price Range</h4>
                   <MultiRangeSlider className="price-range" min={0} max={10000} step={100} minValue={minPriceValue} maxValue={maxPriceValue}
                       onInput={(e) => {
@@ -319,7 +320,7 @@ const Filter = () => {
                 </div>
 
                 {/* area range */}
-                <div className="col-sm-6">
+                <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6"}>
                   <h4>Area Range</h4>
                   <MultiRangeSlider className="area-range" min={0} max={10000} step={100} minValue={minAreaValue} maxValue={maxAreaValue}
                       onInput={(e) => {

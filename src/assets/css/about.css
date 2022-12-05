@@ -1,0 +1,197 @@
+/*===========================================================
+about CSS
+=============================================================*/
+.about {
+  padding: 64px 0;
+}
+
+.about .image {
+  width: 440px;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 13px solid var(--white);
+  -webkit-filter: drop-shadow(0px 0px 37px rgba(34, 34, 51, 0.22));
+  filter: drop-shadow(0px 0px 37px rgba(34, 34, 51, 0.22));
+  box-sizing: border-box;
+}
+
+.about .image img {
+  width: 100%;
+}
+
+.about .video {
+  position: absolute;
+  bottom: 66px;
+  left: 0;
+  width: 365px;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(0px 0px 37px rgba(34, 34, 51, 0.22));
+  filter: drop-shadow(0px 0px 37px rgba(34, 34, 51, 0.22));
+}
+
+.about .video button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--primary);
+  border: 4px solid var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.about .video button::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+  animation: ripple;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+}
+
+.about .video button .play-icon{
+  font-size: 14px;
+  color: var(--white);
+}
+
+
+.about .text-content .about-box {
+  padding-bottom: 28px;
+}
+
+.about .text-content .title {
+  display: inline-block;
+  padding: 5px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 47px;
+}
+
+.about .text-content .title.ab-us {
+  color: #007BEC;
+  background-color: #D9EFFF;
+}
+
+.about .text-content .title.mission {
+  color: #2137FF;
+  background-color: #E0E5FF;
+}
+
+.about .text-content h3 {
+  padding: 4px 0;
+  color: var(--primary-text);
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 800;
+}
+
+.about .text-content p {
+  color: var(--primary-text2);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.about .text-content .contact-btn {
+  display: inline-block;
+  width: 296px;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+  .about {
+    padding: 32px 0;
+  }
+
+  .about .image {
+    width: 100%;
+  }
+
+  .about .video {
+    width: auto;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .about {
+    padding: 32px 0;
+  }
+
+  .about .image {
+    margin: 0 auto 32px auto;
+  }
+
+  .about .video,
+  .about .image {
+    width: 100%;
+  }
+
+  .about .text-content h3 {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .about .text-content h3 br {
+    display: none;
+  }
+
+  .about .text-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .about {
+    padding: 32px 0;
+  }
+
+  .about .image {
+    width: 100%;
+    margin-bottom: 98px;
+  }
+
+  .about .video {
+    width: calc(100% - 54px);
+    bottom: 50px;
+  }
+
+  .about .text-content h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .about .text-content h3 br {
+    display: none;
+  }
+
+  .about .text-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .about .text-content .contact-btn {
+    width: 100%;
+    max-width: 296px;
+    font-size: 14px;
+  }
+}
