@@ -8,6 +8,7 @@ import SinglePropertyList from './SinglePropertyList';
 import SinglePropertyGrid from './SinglePropertyGrid';
 import {properties} from '../../data/property';
 import '../../assets/css/properties.css';
+import { useParams } from 'react-router-dom';
 
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -25,6 +26,12 @@ const Properties = () => {
   useEffect(() => {
     setFilterProperties(properties);
   }, []);
+
+  // const {proCategory} = useParams();
+  // if(proCategory){
+  //   const filteredProperties = properties.filter(item => item.category === proCategory);
+  //   setFilterProperties(filteredProperties);
+  // }
 
   // filter properties
   const filterProperty = category => {

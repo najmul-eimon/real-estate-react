@@ -12,15 +12,15 @@ const RelatedProperties = () => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <section class="all-properties related-properties">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="title">
+      <section className="all-properties related-properties">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="title">
                 <h2>Related Properties</h2>
               </div>
             </div>
-            <div class="col-md-12">
+            <div className="col-md-12">
               <Swiper 
                 loop= {true}
                 spaceBetween= {24}

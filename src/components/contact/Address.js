@@ -4,21 +4,21 @@ import '../../assets/css/contacts.css';
 
 const Address = () => {
   return (
-    <section class="address">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title text-center">
+    <section className="address">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="title text-center">
               <h2>Our Offices</h2>
             </div>
           </div>
-          <div class="col-lg-12 col-xl-10 offset-xl-1">
-            <div class="row address-row">
+          <div className="col-lg-12 col-xl-10 offset-xl-1">
+            <div className="row address-row">
               {
                 address.map(({id, image, city, area, location, phone, email}) => 
-                <div key={id} class="col-md-6 col-lg-6">
-                  <div class="address-card">
-                    <div class="image">
+                <div key={id} className="col-md-6 col-lg-6">
+                  <div className="address-card">
+                    <div className="image">
                       <img src={image} alt=""/>
                     </div>
                     <h4>{city}</h4>
@@ -28,7 +28,7 @@ const Address = () => {
                       <li><p>{phone}</p></li>
                       <li><p>{email}</p></li>
                     </ul>
-                    <a href="#!" class="btn-style">Get direction</a>
+                    <a href="#!" className="btn-style">Get direction</a>
                   </div>
                 </div>
                 )
