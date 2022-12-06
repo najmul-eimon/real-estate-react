@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Properties from '../../components/properties/Properties';
 import Breadcrumb from '../../components/shared/Breadcrumb';
 import Filter from '../../components/shared/Filter';
 
 const Property = () => {
+  useEffect(() => {
+    document.title = 'Real Estate | Property';
+  }, []);
   return (
     <>
       <Breadcrumb

@@ -5,9 +5,15 @@ import {BsChevronDown} from 'react-icons/bs';
 import {IoMdClose} from 'react-icons/io';
 import '../../assets/css/common.css';
 
+
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  const categories = ["appartment","villa","house","duplexes","family-house"];
+  const categories = ["appartment","villa","house","duplexes","family house"];
+
+  const setCategoryLocal = (cat) => {
+    localStorage.setItem('propertyCategory', JSON.stringify(cat));
+    setShowNav(false);
+  }
 
   return (
     <header>
@@ -45,12 +51,12 @@ const Navbar = () => {
                         <NavLink className="nav-link" to="/" end onClick={() => setShowNav(false)}>Home</NavLink>
                       </li>
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/property" role="button" onClick={() => setShowNav(false)}>
+                        <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}>
                           Property <BsChevronDown/>
                         </NavLink>
                         <ul className="dropdown-submenu custom-scrollbar">
                           {
-                            categories.map((category, index) => <li key={index}><Link className="dropdown-item" to={`/property/${category}`}>{category.split("-").join(" ")}</Link></li>)
+                            categories.map((category, index) => <li key={index}><Link className="dropdown-item" onClick={() => setCategoryLocal(category)} to="/property">{category}</Link></li>)
                           }
                         </ul>
                       </li>

@@ -52,7 +52,7 @@
 
 .sidebar .featured-list .image {
   width: 150px;
-  height: auto;
+  height: 97px;
   border-radius: 4px;
   overflow: hidden;
   flex-shrink: 0;
@@ -61,10 +61,13 @@
 .sidebar .featured-list .image img,
 .sidebar .blog-list .image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sidebar .featured-list .others,
-.sidebar .blog-list .others {
+.sidebar .blog-list .others ,
+.sidebar .blog-list .others span {
   flex-grow: 1;
   width: 100%;
 }
@@ -100,8 +103,8 @@
   border-radius: 16px;
   overflow: hidden;
   width: 134px;
+  height: 104px;
   flex-shrink: 0;
-  height: auto;
 }
 
 .sidebar .blog-list span {
@@ -110,21 +113,21 @@
   color: var(--primary-text2);
 }
 
-.sidebar .blog-list span i {
+.sidebar .blog-list span .date-icon {
   font-size: 18px;
 }
 
 .sidebar .blog-list .blog-details-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 24px;
   width: 24px;
-  text-align: center;
   background-color: transparent;
 }
 
-.sidebar .blog-list .blog-details-btn i {
+.sidebar .blog-list .blog-details-btn .details-icon {
   font-size: 20px;
-  line-height: 24px;
   color: var(--primary);
 }
 
@@ -291,10 +294,12 @@
 
   .sidebar .featured-list .image {
     width: 103px;
+    height: 68px;
   }
 
   .sidebar .blog-list .image {
     width: 90px;
+    height: 80px;
     border-radius: 12px;
   }
 

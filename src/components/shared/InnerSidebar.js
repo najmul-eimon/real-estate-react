@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 import {FaStar} from 'react-icons/fa';
-import {properties} from '../../data/property';
-import Filter from '../../components/shared/Filter';
-import ContactFrom from '../../components/contact/ContactForm';
 import {FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube} from 'react-icons/fa';
+import {IoCalendarNumberOutline} from 'react-icons/io5';
+import {HiArrowUpRight} from 'react-icons/hi2';
+import ContactFrom from '../../components/contact/ContactForm';
+import Filter from '../../components/shared/Filter';
+import {properties} from '../../data/property';
+import {blogs} from '../../data/blog';
 import '../../assets/css/inner-sidebar.css';
 
-const InnerSidebar = () => {
+const InnerSidebar = ({data}) => {
   return (
     <div className="sidebar">
       {/* Featured Properties */}
@@ -16,7 +19,7 @@ const InnerSidebar = () => {
         </div>
         <ul className="featured-list">
           {
-            properties.slice(0,3).map(({id, image, name, price, rating}) => 
+            properties?.slice(0,3).map(({id, image, name, price, rating}) => 
             <li key={id} className="d-flex align-items-center">
               <div className="image">
                 <Link to={`/property/property-details/${id}`}>
@@ -39,13 +42,16 @@ const InnerSidebar = () => {
       </div>
 
       {/* Search Properties */}
-      <div className="details-box">
-        <div className="details-title">
-          <h5>Search Properties</h5>
+      {
+        data === "property-details" && (
+        <div className="details-box">
+          <div className="details-title">
+            <h5>Search Properties</h5>
+          </div>
+          {/* filter options */}
+          <Filter data="sidebar"/>
         </div>
-        {/* filter options */}
-        <Filter data="sidebar"/>
-      </div>
+      )}
 
       {/* Drop Messege For Book */}
       <div className="details-box">
@@ -61,42 +67,22 @@ const InnerSidebar = () => {
           <h5>Leatest Blogs</h5>
         </div>
         <ul className="blog-list">
-          <li className="d-flex align-items-center">
-            <div className="image">
-              <img src="assets/images/property-details/blog1.png" alt=""/>
-            </div>
-            <div className="others">
-              <div className="d-flex align-items-center justify-content-between">
-                <span className="d-flex align-items-center"><i className="ph-calendar"></i>September 26,2023</span>
-                <a href="blog-details.html" className="blog-details-btn"><i className="ph-arrow-up-right"></i></a>
+          {
+            blogs?.slice(0,3).map(({id, title, image, date}) => 
+            <li key={id} className="d-flex align-items-center">
+              <div className="image">
+                <img src={image} alt=""/>
               </div>
-              <h4>How much do you know about......</h4>
-            </div>
-          </li>
-          <li className="d-flex align-items-center">
-            <div className="image">
-              <img src="assets/images/property-details/blog2.png" alt=""/>
-            </div>
-            <div className="others">
-              <div className="d-flex align-items-center justify-content-between">
-                <span className="d-flex align-items-center"><i className="ph-calendar"></i>September 26,2023</span>
-                <a href="blog-details.html" className="blog-details-btn"><i className="ph-arrow-up-right"></i></a>
+              <div className="others">
+                <div className="d-flex align-items-center justify-content-between">
+                  <span className="d-flex align-items-center text-truncate"><IoCalendarNumberOutline className='date-icon'/>{date}</span>
+                  <Link to={`/blog/blog-details/${id}`} className="blog-details-btn"><HiArrowUpRight className='details-icon'/></Link>
+                </div>
+                <h4>{title.length > 26 ? title.substring(0, 26) + "..." : title}</h4>
               </div>
-              <h4>How much do you know about......</h4>
-            </div>
-          </li>
-          <li className="d-flex align-items-center">
-            <div className="image">
-              <img src="assets/images/property-details/blog3.png" alt=""/>
-            </div>
-            <div className="others">
-              <div className="d-flex align-items-center justify-content-between">
-                <span className="d-flex align-items-center"><i className="ph-calendar"></i>September 26,2023</span>
-                <a href="blog-details.html" className="blog-details-btn"><i className="ph-arrow-up-right"></i></a>
-              </div>
-              <h4>How much do you know about......</h4>
-            </div>
-          </li>
+            </li>
+            )
+          }
         </ul>
       </div>
 

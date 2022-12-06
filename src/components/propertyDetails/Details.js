@@ -151,7 +151,7 @@ const Details = ({ data }) => {
 
               {/*---------------------------------- sidebar ----------------------------------*/}
               <div className="col-lg-5 col-xl-4">
-                <InnerSidebar />
+                <InnerSidebar data={"property-details"} />
               </div>
             </div>
           </div>

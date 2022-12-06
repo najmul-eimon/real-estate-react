@@ -249,6 +249,9 @@ properties CSS
   background-color: var(--primary);
   color: var(--white);
 }
+.all-properties .paginate .disabled a {
+  opacity: 0.6;
+}
 
 
 .all-properties .paginate .previous a {

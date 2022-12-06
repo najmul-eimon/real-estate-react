@@ -39,7 +39,7 @@ const RelatedProperties = () => {
                 }}
                 className="related-property-slider">
                   {
-                    properties.map(({id, name, floor, space, bedRoom, image, description}) => <SwiperSlide>
+                    properties.map(({id, name, floor, space, bedRoom, image, description}) => <SwiperSlide key={id}>
                       <div className="single-property">
                         <div className="item-wrapper">
                           <h3>{name}</h3>

@@ -8,33 +8,32 @@ import SinglePropertyList from './SinglePropertyList';
 import SinglePropertyGrid from './SinglePropertyGrid';
 import {properties} from '../../data/property';
 import '../../assets/css/properties.css';
-import { useParams } from 'react-router-dom';
 
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeBtn, setActiveBtn] = useState('all');
   const [filterProperties, setFilterProperties] = useState([]);
   const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'store', 'double'];
-
-  // pagination
-  const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage  = 6;
-  const endOffset = itemOffset + itemsPerPage;
-  const currentItems = filterProperties.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(filterProperties.length / itemsPerPage);
-
+  
   useEffect(() => {
     setFilterProperties(properties);
   }, []);
+  
+  const propertyCategory = JSON.parse(localStorage.getItem('propertyCategory'));
+  const filteredProperties = (category) => properties.filter(item => item.category === category);
+  
+  // filter by click on nav link
+  useEffect(() => {
+    if(properties.findIndex(obj => obj.category === propertyCategory) !== -1){
+      setFilterProperties(filteredProperties(propertyCategory));
+      setActiveBtn(propertyCategory);
+    }
+  }, [propertyCategory]);
 
-  // const {proCategory} = useParams();
-  // if(proCategory){
-  //   const filteredProperties = properties.filter(item => item.category === proCategory);
-  //   setFilterProperties(filteredProperties);
-  // }
 
   // filter properties
   const filterProperty = category => {
+    localStorage.setItem('propertyCategory', JSON.stringify(category));
     setShowDropdown(false);
     setActiveBtn(category);
     
@@ -42,9 +41,15 @@ const Properties = () => {
       setFilterProperties(properties);
       return;
     }
-    const filteredProperties = properties.filter(item => item.category === category);
-    setFilterProperties(filteredProperties);
+    setFilterProperties(filteredProperties(propertyCategory));
   }
+
+  // pagination
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 3;
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = filterProperties.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(filterProperties.length / itemsPerPage);
   
   // pagination page click
   const handlePageClick = (event) => {
@@ -76,7 +81,7 @@ const Properties = () => {
                     <li className='position-relative'>
                       <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
                       {
-                        showDropdown && 
+                        showDropdown && (
                         <ul className='filter-dropdown'>
                           {
                             categories.slice(5).map((category, index) => 
@@ -86,7 +91,7 @@ const Properties = () => {
                             )
                           }
                         </ul>
-                      }
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -100,7 +105,7 @@ const Properties = () => {
                     breakLabel="..."
                     nextLabel=""
                     onPageChange={handlePageClick}
-                    pageRangeDisplayed={5}
+                    pageRangeDisplayed={3}
                     pageCount={pageCount}
                     previousLabel=""
                     renderOnZeroPageCount={null}
@@ -123,7 +128,7 @@ const Properties = () => {
                     <li className='position-relative'>
                       <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
                       {
-                        showDropdown && 
+                        showDropdown && (
                         <ul className='filter-dropdown'>
                           {
                             categories.slice(5).map((category, index) => 
@@ -133,7 +138,7 @@ const Properties = () => {
                             )
                           }
                         </ul>
-                      }
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -148,7 +153,7 @@ const Properties = () => {
                       breakLabel="..."
                       nextLabel=""
                       onPageChange={handlePageClick}
-                      pageRangeDisplayed={5}
+                      pageRangeDisplayed={3}
                       pageCount={pageCount}
                       previousLabel=""
                       renderOnZeroPageCount={null}
