@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './components/layout/Layout';
+import NotFound from './components/notFound/NotFound';
 import About from './pages/about/About';
 import BlogPage from './pages/blog/BlogPage';
 import BlogDetails from './pages/blogDetails/BlogDetails';
@@ -21,6 +22,7 @@ function App() {
         <Route path="property/property-details/:propertyId" element={<PropertyDetails />} />
         <Route path="contact" element={<ContactPage />} />
       </Route>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
   );
 }

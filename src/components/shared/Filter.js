@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {BsChevronDown, BsSliders} from 'react-icons/bs';
 import {FiSearch} from 'react-icons/fi';
 import MultiRangeSlider from "multi-range-slider-react";
@@ -29,12 +30,12 @@ const Filter = ({data}) => {
 
   const [showMoreFilters, setShowMoreFilters] = useState(false);
 
-  const locations = ["All Cities", "New york", "Los Angeles", "Chicago", "San Diego"];
-  const types = ["All Property", "Single House", "Townhouse", "Multi Family House", "Villa"];
-  const categories = ["All Apartment", "Villas", "House", "Townhouse", "Villa"];
-  const allStatus = ["All Cities", "New york", "Los Angeles", "Chicago", "San Diego"];
-  const cities = ["All Cities", "New york", "Los Angeles", "Chicago", "San Diego"];
-  const rooms = ["Single Room", "Double Room"];
+  const locations = ["Garden City", "Jamestown", "Daly City", "Oakland", "Alexandria", "New Orleans", "Northfield", "Saint Cloud", "Jersey City", "Atlantic City", "Ellensburg", "Olympia"];
+  const types = ["Single House", "Townhouse", "Multi Family House", "Land"];
+  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex', 'small home'];
+  const allStatus = ["Rent", "Sale"];
+  const cities = ["All Cities", "New york", "California", "Louisiana", "Minnesota", "New Jersey", "Washington"];
+  const rooms = ["Single Room", "Double Room", "Many Rooms"];
   const features = ["Duplex", "Delux", "Adjoining", "Suite"];
 
   const handlePriceInput = (e) => {
@@ -46,6 +47,10 @@ const Filter = ({data}) => {
     setMinAreaValue(e.minValue);
     setMaxAreaValue(e.maxValue);
   };
+
+  const handleSearchProperty = () => {
+    console.log('search');
+  }
 
   return (
     <div className="filter-main">
@@ -159,9 +164,9 @@ const Filter = ({data}) => {
               <button type="button" id="moreFilters" className="filter" onClick={() => setShowMoreFilters(!showMoreFilters)}>
                 Filter <BsSliders className="filter-icon"/>
               </button>
-              <button type="button" className="search btn-style">
+              <Link to="/property" className="search btn-style" onClick={handleSearchProperty}>
                 Search <FiSearch className={data === "sidebar" ? "search-icon" : "search-icon d-none"}/>
-              </button>
+              </Link>
             </div>
           </div>
 

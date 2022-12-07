@@ -8,7 +8,15 @@ blog CSS
 .blog .blogs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+}
+
+.blog .recent-blogs .blogs{
+  row-gap: 24px;
+  column-gap: 24px;
+}
+.blog .all-blogs .blogs{
+  row-gap: 32px;
+  column-gap: 24px;
 }
 
 .blog .single-blog {
@@ -247,6 +255,9 @@ blog CSS
 
   .blog .blogs {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .blog .all-blogs .blogs{
+    row-gap: 24px;
   }
 
   .blog .single-blog .content {

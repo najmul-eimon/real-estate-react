@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {places} from '../../data/place';
-import '../../assets/css/place.css';
 import { Link } from 'react-router-dom';
 import {BiChevronRightCircle} from 'react-icons/bi';
+import { SaveToLocalContext } from '../layout/Layout';
+import '../../assets/css/place.css';
 
 const Place = () => {
+  // get data from context
+  const {setGetCity} = useContext(SaveToLocalContext);
 
   return (
     <section className="place">
@@ -19,12 +22,12 @@ const Place = () => {
             <div className="all-places">
               <div className="grid">
                 {
-                  places.map(place => 
-                    <div key={place.id} className="single-place">
-                      <Link to="property">
-                        <img src={place.image} className="img-fluid" alt=""/>
+                  places.map(({id, name, image}) => 
+                    <div key={id} className="single-place">
+                      <Link to="property" onClick={() => setGetCity(name)}>
+                        <img src={image} className="img-fluid" alt=""/>
                         <div className="overlay">
-                          <p>{place.name} <BiChevronRightCircle className='place-icon'/></p>
+                          <p>{name} <BiChevronRightCircle className='place-icon'/></p>
                         </div>
                       </Link>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import {BsGrid} from 'react-icons/bs';
@@ -7,46 +7,57 @@ import ReactPaginate from 'react-paginate';
 import SinglePropertyList from './SinglePropertyList';
 import SinglePropertyGrid from './SinglePropertyGrid';
 import {properties} from '../../data/property';
+import { SaveToLocalContext } from '../layout/Layout';
 import '../../assets/css/properties.css';
 
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeBtn, setActiveBtn] = useState('all');
-  const [filterProperties, setFilterProperties] = useState([]);
-  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'store', 'double'];
+  const [filterProperties, setFilterProperties] = useState(properties);
+  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex'];
   
-  useEffect(() => {
-    setFilterProperties(properties);
-  }, []);
   
-  const propertyCategory = JSON.parse(localStorage.getItem('propertyCategory'));
-  const filteredProperties = (category) => properties.filter(item => item.category === category);
+  // get data from context
+  const {getCategory, setGetCategory, getCity} = useContext(SaveToLocalContext);
   
+
+  // category wise filtering
+  const filteredProperties = (category) => properties.filter(item => getCity === null ? item.category === category : item.category === category && item.city === getCity);
+
+
+  // city wise filtering
+  const filteredCity = (city) => properties.filter(item => item.city === city);
+  
+
   // filter by click on nav link
   useEffect(() => {
-    if(properties.findIndex(obj => obj.category === propertyCategory) !== -1){
-      setFilterProperties(filteredProperties(propertyCategory));
-      setActiveBtn(propertyCategory);
+    if(properties.findIndex(obj => obj.category === getCategory) !== -1){
+      setFilterProperties(filteredProperties(getCategory));
+      setActiveBtn(getCategory);
     }
-  }, [propertyCategory]);
+    if(getCity){
+      setFilterProperties(getCity === null ? properties : filteredCity(getCity));
+    }
+  }, [getCategory]);
 
 
   // filter properties
   const filterProperty = category => {
-    localStorage.setItem('propertyCategory', JSON.stringify(category));
+    setGetCategory(category);
     setShowDropdown(false);
     setActiveBtn(category);
     
     if(category === 'all'){
-      setFilterProperties(properties);
+      setFilterProperties(getCity === null ? properties : filteredCity(getCity));
       return;
     }
-    setFilterProperties(filteredProperties(propertyCategory));
+    setFilterProperties(filteredProperties(getCategory));
   }
+  
 
   // pagination
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 3;
+  const itemsPerPage = 6;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filterProperties.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filterProperties.length / itemsPerPage);
@@ -167,7 +178,6 @@ const Properties = () => {
         </div>
       </div>
     </div>
-    
   )
 }
 

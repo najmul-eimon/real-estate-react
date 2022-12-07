@@ -11,12 +11,12 @@ export const places = [
   },
   {
     "id": 2,
-    "name": "San Francisco",
+    "name": "California",
     "image": place2
   },
   {
     "id": 3,
-    "name": "Los Angeles",
+    "name": "Louisiana",
     "image": place3
   },
   {

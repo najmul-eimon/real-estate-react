@@ -1,19 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import {BsChevronDown} from 'react-icons/bs';
 import {IoMdClose} from 'react-icons/io';
 import '../../assets/css/common.css';
+import { SaveToLocalContext } from '../layout/Layout';
 
 
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
-  const categories = ["appartment","villa","house","duplexes","family house"];
-
-  const setCategoryLocal = (cat) => {
-    localStorage.setItem('propertyCategory', JSON.stringify(cat));
-    setShowNav(false);
-  }
+  const categories = ["appartment","villa","house","duplexes","family house"]; 
+  const {showNav, setShowNav, setCategoryLocal} = useContext(SaveToLocalContext);
 
   return (
     <header>
@@ -48,7 +44,7 @@ const Navbar = () => {
                     </div>
                     <ul className="nav-bar">
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/" end onClick={() => setShowNav(false)}>Home</NavLink>
+                        <NavLink className="nav-link" to="/" end onClick={() => setCategoryLocal("all")}>Home</NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}>

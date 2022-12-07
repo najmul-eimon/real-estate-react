@@ -9,7 +9,7 @@ import PropertyModal from "../shared/PropertyModal";
 import "../../assets/css/property-details.css";
 
 const Details = ({ data }) => {
-  const { name, address, date, price, gallery, description, propertyDetails, video, floorPlans } = data;
+  const { name, address, location, date, price, gallery, description, propertyDetails, video, floorPlans } = data;
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -28,7 +28,7 @@ const Details = ({ data }) => {
                   <ul>
                     <li>
                       <FiMapPin className="icon" />
-                      <p>{address}</p>
+                      <p>{address}, {location}</p>
                     </li>
                     <li>
                       <IoCalendarNumberOutline className="icon" />
