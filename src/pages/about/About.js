@@ -7,6 +7,7 @@ import Breadcrumb from '../../components/shared/Breadcrumb';
 const About = () => {
   useEffect(() => {
     document.title = 'Real Estate | About';
+    window.scrollTo(0,0);
   }, []);
   return (
     <>

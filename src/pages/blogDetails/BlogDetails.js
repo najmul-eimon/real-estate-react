@@ -16,6 +16,7 @@ const BlogDetails = () => {
 
   useEffect(() => {
     document.title = "Real Estate | Blog Details";
+    window.scrollTo(0,0);
   }, []);
 
   return (

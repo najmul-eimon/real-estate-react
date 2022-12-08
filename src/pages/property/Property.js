@@ -6,7 +6,9 @@ import Filter from '../../components/shared/Filter';
 const Property = () => {
   useEffect(() => {
     document.title = 'Real Estate | Property';
+    window.scrollTo(0,0);
   }, []);
+  
   return (
     <>
       <Breadcrumb

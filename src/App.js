@@ -21,8 +21,8 @@ function App() {
         <Route path="property" element={<Property />} />
         <Route path="property/property-details/:propertyId" element={<PropertyDetails />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path='*' element={<NotFound/>}/>
       </Route>
-      <Route path='*' element={<NotFound/>}/>
     </Routes>
   );
 }

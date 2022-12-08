@@ -6,6 +6,7 @@ import Breadcrumb from '../../components/shared/Breadcrumb';
 const ContactPage = () => {
   useEffect(() => {
     document.title = 'Real Estate | Contact';
+    window.scrollTo(0,0);
   }, []);
 
   return (

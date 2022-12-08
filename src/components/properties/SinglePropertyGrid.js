@@ -4,7 +4,7 @@ import PropertyModal from '../shared/PropertyModal';
 import '../../assets/css/properties.css';
 
 const SinglePropertyGrid = ({property}) => {
-  const {id, name, image, floor, space, bedRoom, description} = property;
+  const {id, name, image, floor, space, city, category, bedRoom, description} = property;
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -15,6 +15,7 @@ const SinglePropertyGrid = ({property}) => {
       <div className="col-md-6 col-lg-4">
         <div className="single-property">
           <div className="item-wrapper">
+            <p>{city}, {category}</p>
             <h3>{name}</h3>
             <div className="d-flex align-items-center justify-content-between feature">
               <div className="text-start">

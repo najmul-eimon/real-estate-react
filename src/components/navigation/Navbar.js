@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import {BsChevronDown} from 'react-icons/bs';
@@ -8,7 +8,7 @@ import { SaveToLocalContext } from '../layout/Layout';
 
 
 const Navbar = () => {
-  const categories = ["appartment","villa","house","duplexes","family house"]; 
+  const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family", "duplex"]; 
   const {showNav, setShowNav, setCategoryLocal} = useContext(SaveToLocalContext);
 
   return (
@@ -44,11 +44,11 @@ const Navbar = () => {
                     </div>
                     <ul className="nav-bar">
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/" end onClick={() => setCategoryLocal("all")}>Home</NavLink>
+                        <NavLink className="nav-link" to="/" end onClick={() => setShowNav(false)}>Home</NavLink>
                       </li>
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}>
-                          Property <BsChevronDown/>
+                          Property <BsChevronDown className='arrow-icon'/>
                         </NavLink>
                         <ul className="dropdown-submenu custom-scrollbar">
                           {

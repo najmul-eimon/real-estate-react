@@ -678,6 +678,10 @@ header {
     margin-top: 16px;
   }
 
+  .navigation .nav-item .arrow-icon{
+    display: none;
+  }
+
   .navigation .dropdown-item {
     font-size: 14px;
     padding: 8px 12px;

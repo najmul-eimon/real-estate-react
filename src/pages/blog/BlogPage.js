@@ -5,6 +5,7 @@ import Breadcrumb from '../../components/shared/Breadcrumb';
 const BlogPage = () => {
   useEffect(() => {
     document.title = 'Real Estate | Blog';
+    window.scrollTo(0,0);
   }, []);
 
   return (

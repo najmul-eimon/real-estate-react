@@ -6,22 +6,22 @@ import place4 from '../assets/images/place/minnesota.jpg';
 export const places = [
   {
     "id": 1,
-    "name": "New York",
+    "name": "new york",
     "image": place1
   },
   {
     "id": 2,
-    "name": "California",
+    "name": "california",
     "image": place2
   },
   {
     "id": 3,
-    "name": "Louisiana",
+    "name": "louisiana",
     "image": place3
   },
   {
     "id": 4,
-    "name": "Minnesota",
+    "name": "minnesota",
     "image": place4
   }
 ]

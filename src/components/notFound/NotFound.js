@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../navigation/Navbar';
 import image from '../../assets/images/not-found1.png';
-import '../../assets/css/not-found.css';
-import { useEffect } from 'react';
 import { SaveToLocalContext } from '../layout/Layout';
+import '../../assets/css/not-found.css';
 
 const NotFound = () => {
   // const {setShowFooter} = useContext(SaveToLocalContext);

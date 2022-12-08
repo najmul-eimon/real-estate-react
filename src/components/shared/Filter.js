@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import {BsChevronDown, BsSliders} from 'react-icons/bs';
 import {FiSearch} from 'react-icons/fi';
 import MultiRangeSlider from "multi-range-slider-react";
+import {properties} from '../../data/property';
 import "../../assets/css/filter-option.css";
 
 const Filter = ({data}) => {
+
   const [showLocation, setShowLocation] = useState(false);
   const [showTypes, setShowTypes] = useState(false);
   const [showCategory, setShowCategory] = useState(false);
@@ -16,7 +18,7 @@ const Filter = ({data}) => {
 
   const [location, setLocation] = useState("Select Location");
   const [type, setType] = useState("Property Type");
-  const [category, setCategory] = useState("All Category");
+  const [category, setCategory] = useState("Category");
   const [status, setStatus] = useState("Select Status");
   const [city, setCity] = useState("Select City");
   const [room, setRoom] = useState("Select Room");
@@ -30,12 +32,12 @@ const Filter = ({data}) => {
 
   const [showMoreFilters, setShowMoreFilters] = useState(false);
 
-  const locations = ["Garden City", "Jamestown", "Daly City", "Oakland", "Alexandria", "New Orleans", "Northfield", "Saint Cloud", "Jersey City", "Atlantic City", "Ellensburg", "Olympia"];
-  const types = ["Single House", "Townhouse", "Multi Family House", "Land"];
-  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex', 'small home'];
+  const locations = ["garden city", "jamestown", "Daly City", "Oakland", "Alexandria", "New Orleans", "Northfield", "Saint Cloud", "Jersey City", "Atlantic City", "Ellensburg", "Olympia"];
+  const types = ["Single House", "Town house", "Multi Family House"];
+  const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family", "duplex"];
   const allStatus = ["Rent", "Sale"];
   const cities = ["All Cities", "New york", "California", "Louisiana", "Minnesota", "New Jersey", "Washington"];
-  const rooms = ["Single Room", "Double Room", "Many Rooms"];
+  const rooms = ["Single Room", "Double Room", "Many Room"];
   const features = ["Duplex", "Delux", "Adjoining", "Suite"];
 
   const handlePriceInput = (e) => {
@@ -48,8 +50,17 @@ const Filter = ({data}) => {
     setMaxAreaValue(e.maxValue);
   };
 
+  // let megaFilter;
+  let arr = [];
   const handleSearchProperty = () => {
-    console.log('search');
+    // megaFilter = properties.filter(data => data.location === location.toLocaleLowerCase() || data.type === type.toLocaleLowerCase());
+    // console.log(megaFilter);
+    if(location !== "Select Location" && !arr.includes(location)){
+      arr.push({location: location});
+    }
+    if(type !== "Property Type" && !arr.includes(type)){
+      arr.push({type: type});
+    }
   }
 
   return (

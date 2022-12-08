@@ -18,6 +18,7 @@ const PropertyDetails = () => {
 
   useEffect(() => {
     document.title = "Real Estate | Property Details";
+    window.scrollTo(0,0);
   }, []);
 
   return (

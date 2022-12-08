@@ -5,8 +5,8 @@ import Navbar from '../navigation/Navbar';
 
 
 export const SaveToLocalContext = createContext({});
-const Layout = () => {
 
+const Layout = () => {
   const [showNav, setShowNav] = useState(false);
   const [getCategory, setGetCategory] = useState('');
   const [getCity, setGetCity] = useState(null);
@@ -14,6 +14,7 @@ const Layout = () => {
   const setCategoryLocal = (cat) => {
     setGetCategory(cat);
     setShowNav(false);
+    setGetCity(null);
   }
   
   return (
@@ -25,7 +26,7 @@ const Layout = () => {
         setGetCategory, 
         setCategoryLocal,
         getCity, 
-        setGetCity
+        setGetCity,
       }}>
         <Navbar/>
           <main>
