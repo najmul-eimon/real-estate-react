@@ -23,27 +23,32 @@ const Properties = () => {
   }, []);
 
   // get data from context
-  const {getCategory, setGetCategory, getCity} = useContext(SaveToLocalContext);
+  const {getCategory, setGetCategory, getCity, mainFilter} = useContext(SaveToLocalContext);
 
 
   // category wise filtering
   const filteredProperties = (category) => properties.filter(item => getCity === null ? item.category === category.toLowerCase() : item.category === category.toLowerCase() && item.city === getCity);
-
+  const mainFiltered = (category) => mainFilter.filter(item => item.category === category);
 
   // city wise filtering
   const filteredCity = (city) => properties.filter(item => item.city === city.toLowerCase());
-  
 
-  // filter by click on nav link
   useEffect(() => {
     if(getCity !== null){
       setFilterProperties(getCity === null ? properties : filteredCity(getCity));
     }
+    
+    if(mainFilter !== null){
+      setFilterProperties(mainFilter === null ? properties : mainFilter);
+    }
+    
+    // filter by click on nav link
     if(properties.findIndex(obj => obj.category === getCategory) !== -1){
       setFilterProperties(filteredProperties(getCategory));
       setActiveBtn(getCategory);
-    }
-  }, [getCategory]);
+    }    
+    
+  }, [getCategory,mainFilter]);
 
 
   // filter properties

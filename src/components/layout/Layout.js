@@ -10,6 +10,7 @@ const Layout = () => {
   const [showNav, setShowNav] = useState(false);
   const [getCategory, setGetCategory] = useState('');
   const [getCity, setGetCity] = useState(null);
+  const [mainFilter, setMainFilter] = useState(null);
 
   const setCategoryLocal = (cat) => {
     setGetCategory(cat);
@@ -27,6 +28,8 @@ const Layout = () => {
         setCategoryLocal,
         getCity, 
         setGetCity,
+        mainFilter,
+        setMainFilter
       }}>
         <Navbar/>
           <main>

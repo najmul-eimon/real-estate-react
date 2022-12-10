@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import {BsChevronDown, BsSliders} from 'react-icons/bs';
 import {FiSearch} from 'react-icons/fi';
 import MultiRangeSlider from "multi-range-slider-react";
+import { SaveToLocalContext } from "../layout/Layout";
 import {properties} from '../../data/property';
 import "../../assets/css/filter-option.css";
+import { useEffect } from "react";
 
 const Filter = ({data}) => {
 
@@ -36,7 +38,7 @@ const Filter = ({data}) => {
   const types = ["Single House", "Town house", "Multi Family House"];
   const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family", "duplex"];
   const allStatus = ["Rent", "Sale"];
-  const cities = ["All Cities", "New york", "California", "Louisiana", "Minnesota", "New Jersey", "Washington"];
+  const cities = ["New york", "California", "Louisiana", "Minnesota", "New Jersey", "Washington"];
   const rooms = ["Single Room", "Double Room", "Many Room"];
   const features = ["Duplex", "Delux", "Adjoining", "Suite"];
 
@@ -49,19 +51,68 @@ const Filter = ({data}) => {
     setMinAreaValue(e.minValue);
     setMaxAreaValue(e.maxValue);
   };
-
-  // let megaFilter;
-  let arr = [];
+  
+  const {mainFilter, setMainFilter} = useContext(SaveToLocalContext);
+  let obj = {};
+  
   const handleSearchProperty = () => {
-    // megaFilter = properties.filter(data => data.location === location.toLocaleLowerCase() || data.type === type.toLocaleLowerCase());
-    // console.log(megaFilter);
-    if(location !== "Select Location" && !arr.includes(location)){
-      arr.push({location: location});
+    if(location !== "Select Location"){
+      obj.location = location;
     }
-    if(type !== "Property Type" && !arr.includes(type)){
-      arr.push({type: type});
+    if(type !== "Property Type"){
+      obj.type = type;
     }
+    if(category !== "Category"){
+      obj.category = category;
+    }
+    if(status !== "Select Status"){
+      obj.status = status;
+    }
+    if(city !== "Select City"){
+      obj.city = city;
+    }
+    if(room !== "Select Room"){
+      obj.room = room;
+    }
+    if(feature !== "Select Feature"){
+      obj.feature = feature;
+    }
+
+    // let entries = Object.entries(obj);
+    // let arr = [];
+
+    // properties.map(item => entries.map(([key, val]) => {
+    //     if (item[key] === val.toLowerCase()) {
+    //       // return item[key] === val;
+    //       return arr.push(item);
+    //     }
+    //   })
+    //   )
+
+  //  const myFilter = properties.filter(item => item.location === location.toLowerCase());
+    // setMainFilter(myFilter);
   }
+
+
+  const filterArray = (arr, filters) => {
+    let filterKeys = Object.keys(filters);
+    return arr.filter(eachObj => {
+      return filterKeys.every(eachKey => {
+        if (!filters[eachKey].length) {
+          return true; // passing an empty filter means that filter is ignored.
+        }
+        return filters[eachKey] === (eachObj[eachKey]);
+      });
+    });
+  };
+
+  useEffect(() => {
+    handleSearchProperty();
+    // console.log(obj);
+    console.log(filterArray(properties, obj));
+  }, [obj]);
+  
+  
 
   return (
     <div className="filter-main">

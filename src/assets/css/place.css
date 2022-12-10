@@ -74,6 +74,7 @@ place CSS
   font-size: 24px;
   font-weight: 600;
   width: 100%;
+  text-transform: capitalize;
 }
 
 .place .single-place p .place-icon {
