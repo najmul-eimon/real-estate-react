@@ -60,12 +60,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"1,500 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"1,500 ft2"
       },
       {
         id:4,
@@ -209,12 +209,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"7,600 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"7,600 ft2"
       },
       {
         id:4,
@@ -358,12 +358,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"2,400 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"2,400 ft2"
       },
       {
         id:4,
@@ -507,12 +507,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"4,000 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"4,000 ft2"
       },
       {
         id:4,
@@ -656,12 +656,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"3,600 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"3,600 ft2"
       },
       {
         id:4,
@@ -805,12 +805,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"1,400 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"1,400 ft2"
       },
       {
         id:4,
@@ -954,12 +954,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"6,400 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"6,400 ft2"
       },
       {
         id:4,
@@ -1103,12 +1103,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"5,000 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"5,000 ft2"
       },
       {
         id:4,
@@ -1252,12 +1252,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"5,500 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"5,500 ft2"
       },
       {
         id:4,
@@ -1401,12 +1401,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"2,800 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"2,800 ft2"
       },
       {
         id:4,
@@ -1550,12 +1550,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"3,200 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"3,200 ft2"
       },
       {
         id:4,
@@ -1699,12 +1699,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"6,100 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"6,100 ft2"
       },
       {
         id:4,
@@ -1848,12 +1848,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"2,200 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"2,200 ft2"
       },
       {
         id:4,
@@ -1997,12 +1997,12 @@ export const properties = [
       {
         id:2,
         label:"Property Size",
-        value:"500 ft2"
+        value:"1,700 ft2"
       },
       {
         id:3,
         label:"Property Lot Size",
-        value:"1,000 ft2"
+        value:"1,700 ft2"
       },
       {
         id:4,

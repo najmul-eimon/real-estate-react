@@ -48,8 +48,7 @@ const Properties = () => {
   // category wise filtering
   const filteredProperties = (category) => {
     if(mainFilter !== null){
-      return mainFilter.filter(item => item.category === category);
-      
+      return mainFilter.filter(item => item.category === category);   
     }
     else{
       return properties.filter(item => getCity === null ? item.category === category.toLowerCase() : item.category === category.toLowerCase() && item.city === getCity);
