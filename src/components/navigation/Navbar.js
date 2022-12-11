@@ -47,8 +47,8 @@ const Navbar = () => {
                         <NavLink className="nav-link" to="/" end onClick={() => setShowNav(false)}>Home</NavLink>
                       </li>
                       <li className="nav-item">
-                        {/* <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}> */}
-                        <NavLink className="nav-link" to="/property" role="button">
+                        <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}>
+                        {/* <NavLink className="nav-link" to="/property" role="button"> */}
                           Property <BsChevronDown className='arrow-icon'/>
                         </NavLink>
                         <ul className="dropdown-submenu custom-scrollbar">

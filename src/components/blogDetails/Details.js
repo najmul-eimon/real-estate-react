@@ -49,7 +49,7 @@ const Details = ({data}) => {
                   <div className="img">
                     {
                       gallery?.slice(1).map((img, index) => 
-                      <div className="image">
+                      <div key={index} className="image">
                         <img src={img} alt=""/>
                       </div>
                       )

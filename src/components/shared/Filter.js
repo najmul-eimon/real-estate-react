@@ -52,7 +52,7 @@ const Filter = ({data}) => {
     setMaxAreaValue(e.maxValue);
   };
   
-  const {mainFilter, setMainFilter} = useContext(SaveToLocalContext);
+  const {setMainFilter} = useContext(SaveToLocalContext);
   let obj = {};
   let filteredArr = [];
   
@@ -90,7 +90,7 @@ const Filter = ({data}) => {
           num--;
         }
       }
-      if(num === keys.length){
+      if((num === keys.length) && (element.price <= maxPriceValue && element.price >= minPriceValue) && (element.space <= maxAreaValue && element.space >= minAreaValue)){
         filteredArr.push(element);
       }
     }

@@ -21,7 +21,7 @@ export const properties = [
     id: "1",
     name: "Luxury Villa in Garden City",
     category: "appartment",
-    price: 8600,
+    price: 8000,
     city: "new york",
     location: "garden city",
     address: "Belmont Gardens",
@@ -29,8 +29,8 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "single",
+    space: 1500,
+    room: "single room",
     bedRoom: 3,
     feature: "duplex",
     image: property1,
@@ -178,8 +178,8 @@ export const properties = [
     status: "sale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "double",
+    space: 1200,
+    room: "double room",
     bedRoom: 3,
     feature: "delux",
     image: property2,
@@ -327,7 +327,7 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
+    space: 2400,
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
@@ -476,8 +476,8 @@ export const properties = [
     status: "sale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "single",
+    space: 4000,
+    room: "single room",
     bedRoom: 3,
     feature: "suite",
     image: property4,
@@ -625,8 +625,8 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "double",
+    space: 3600,
+    room: "double room",
     bedRoom: 3,
     feature: "duplex",
     image: property5,
@@ -774,7 +774,7 @@ export const properties = [
     status: "aale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
+    space: 1400,
     room: "many room",
     bedRoom: 3,
     feature: "delux",
@@ -923,8 +923,8 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "single",
+    space: 6400,
+    room: "single room",
     bedRoom: 3,
     feature: "adjoining",
     image: property5,
@@ -1072,8 +1072,8 @@ export const properties = [
     status: "sale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "double",
+    space: 5000,
+    room: "double room",
     bedRoom: 3,
     feature: "suite",
     image: property6,
@@ -1221,7 +1221,7 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
+    space: 5500,
     room: "many room",
     bedRoom: 3,
     feature: "duplex",
@@ -1370,8 +1370,8 @@ export const properties = [
     status: "sale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "single",
+    space: 2800,
+    room: "single room",
     bedRoom: 3,
     feature: "delux",
     image: property3,
@@ -1519,8 +1519,8 @@ export const properties = [
     status: "rent",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
-    room: "double",
+    space: 3200,
+    room: "double room",
     bedRoom: 3,
     feature: "adjoining",
     image: property2,
@@ -1668,11 +1668,309 @@ export const properties = [
     status: "sale",
     date: "September 26,2023",
     floor: 10,
-    space: 759.9,
+    space: 6100,
     room: "many room",
     bedRoom: 3,
     feature: "suite",
     image: property1,
+    description: [
+      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes."
+    ],
+    video: video,
+    rating: 5,
+    gallery: [
+      img1, img4, img5, img2, img3, img6
+    ],
+    propertyDetails:[
+      {
+        id:0,
+        label:"Property Id",
+        value:160
+      },
+      {
+        id:1,
+        label:"Price",
+        value:"$ 300 / month"
+      },
+      {
+        id:2,
+        label:"Property Size",
+        value:"500 ft2"
+      },
+      {
+        id:3,
+        label:"Property Lot Size",
+        value:"1,000 ft2"
+      },
+      {
+        id:4,
+        label:"Rooms",
+        value:5
+      },
+      {
+        id:5,
+        label:"Bedrooms",
+        value:2
+      },
+      {
+        id:6,
+        label:"Bathrooms",
+        value:4
+      },
+      {
+        id:7,
+        label:"Custom ID",
+        value:7
+      },
+      {
+        id:8,
+        label:"Garages",
+        value:1
+      },
+      {
+        id:9,
+        label:"Year Built",
+        value:1950
+      },
+      {
+        id:10,
+        label:"Garage Size",
+        value:"2 cars"
+      },
+      {
+        id:11,
+        label:"Available from",
+        value:"2015-09-24"
+      },
+      {
+        id:12,
+        label:"Basement",
+        value:"Full"
+      },
+      {
+        id:13,
+        label:"Extra Details",
+        value:"Pool"
+      },
+      {
+        id:14,
+        label:"Roofing",
+        value:"New"
+      },
+      {
+        id:15,
+        label:"Exterior Material",
+        value:"Brick"
+      },
+      {
+        id:16,
+        label:"Structure Type",
+        value:"Brick"
+      },
+      {
+        id:17,
+        label:"Floors No",
+        value:1
+      },
+      
+    ],
+    floorPlans: [
+      {
+        name: "first",
+        floor: "First Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor1
+      },
+      {
+        name: "second",
+        floor: "Second Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor2
+      },
+      {
+        name: "third",
+        floor: "Third Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor3
+      },
+      {
+        name: "top",
+        floor: "Top Garden",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor4
+      }
+    ]
+  },
+  {
+    id: "13",
+    name: "Eco Garden in Garden City",
+    category: "house",
+    price: 7600,
+    city: "new york",
+    location: "garden city",
+    address: "Belmont Gardens",
+    type: "town house",
+    status: "rent",
+    date: "September 26,2023",
+    floor: 10,
+    space: 2200,
+    room: "single room",
+    bedRoom: 3,
+    feature: "duplex",
+    image: property2,
+    description: [
+      "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes.",
+      "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+      "Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light. Just steps away from QM2 express bus to Manhattan and local buses; only minutes."
+    ],
+    video: video,
+    rating: 5,
+    gallery: [
+      img1, img4, img5, img2, img3, img6
+    ],
+    propertyDetails:[
+      {
+        id:0,
+        label:"Property Id",
+        value:160
+      },
+      {
+        id:1,
+        label:"Price",
+        value:"$ 300 / month"
+      },
+      {
+        id:2,
+        label:"Property Size",
+        value:"500 ft2"
+      },
+      {
+        id:3,
+        label:"Property Lot Size",
+        value:"1,000 ft2"
+      },
+      {
+        id:4,
+        label:"Rooms",
+        value:5
+      },
+      {
+        id:5,
+        label:"Bedrooms",
+        value:2
+      },
+      {
+        id:6,
+        label:"Bathrooms",
+        value:4
+      },
+      {
+        id:7,
+        label:"Custom ID",
+        value:7
+      },
+      {
+        id:8,
+        label:"Garages",
+        value:1
+      },
+      {
+        id:9,
+        label:"Year Built",
+        value:1950
+      },
+      {
+        id:10,
+        label:"Garage Size",
+        value:"2 cars"
+      },
+      {
+        id:11,
+        label:"Available from",
+        value:"2015-09-24"
+      },
+      {
+        id:12,
+        label:"Basement",
+        value:"Full"
+      },
+      {
+        id:13,
+        label:"Extra Details",
+        value:"Pool"
+      },
+      {
+        id:14,
+        label:"Roofing",
+        value:"New"
+      },
+      {
+        id:15,
+        label:"Exterior Material",
+        value:"Brick"
+      },
+      {
+        id:16,
+        label:"Structure Type",
+        value:"Brick"
+      },
+      {
+        id:17,
+        label:"Floors No",
+        value:1
+      },
+      
+    ],
+    floorPlans: [
+      {
+        name: "first",
+        floor: "First Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor1
+      },
+      {
+        name: "second",
+        floor: "Second Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor2
+      },
+      {
+        name: "third",
+        floor: "Third Floor",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor3
+      },
+      {
+        name: "top",
+        floor: "Top Garden",
+        details: "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
+        image: floor4
+      }
+    ]
+  },
+  {
+    id: "14",
+    name: "Garden Villa in Garden City",
+    category: "land",
+    price: 7900,
+    city: "new york",
+    location: "garden city",
+    address: "Belmont Gardens",
+    type: "multi family house",
+    status: "rent",
+    date: "September 26,2023",
+    floor: 10,
+    space: 1700,
+    room: "single room",
+    bedRoom: 3,
+    feature: "duplex",
+    image: property3,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",

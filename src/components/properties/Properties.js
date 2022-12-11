@@ -13,17 +13,26 @@ import { changeView } from '../../utility/utility';
 
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [activeBtn, setActiveBtn] = useState('all');
   const [filterProperties, setFilterProperties] = useState(properties);
   const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex'];
+  const {activeBtn, setActiveBtn, getCategory, setGetCategory, getCity, mainFilter} = useContext(SaveToLocalContext);
 
   // switch to grid view from list view in mobile screen
   useEffect(() => {
     changeView();
   }, []);
 
-  // get data from context
-  const {getCategory, setGetCategory, getCity, mainFilter} = useContext(SaveToLocalContext);
+  // initial data load
+  useEffect(() => {
+    setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
+    
+    // filter by click on nav link
+    if(properties.findIndex(obj => obj.category === getCategory) !== -1){
+      setFilterProperties(filteredProperties(getCategory));
+      setActiveBtn(getCategory);
+    }    
+    
+  }, [getCategory, mainFilter]);
 
   // set error message for search property
   let errorMsg = "";
@@ -50,19 +59,7 @@ const Properties = () => {
   // city wise filtering
   const filteredCity = (city) => properties.filter(item => item.city === city.toLowerCase());
 
-  // initial data load
-  useEffect(() => {
-    setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
-    
-    // filter by click on nav link
-    if(properties.findIndex(obj => obj.category === getCategory) !== -1){
-      setFilterProperties(filteredProperties(getCategory));
-      setActiveBtn(getCategory);
-    }    
-    
-  }, [getCategory, mainFilter]);
-
-
+  
   // filter properties
   const filterProperty = category => {
     setGetCategory(category.toLowerCase());

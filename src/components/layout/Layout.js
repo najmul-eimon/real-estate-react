@@ -9,6 +9,7 @@ export const SaveToLocalContext = createContext({});
 const Layout = () => {
   const [showNav, setShowNav] = useState(false);
   const [getCategory, setGetCategory] = useState('');
+  const [activeBtn, setActiveBtn] = useState('all');
   const [getCity, setGetCity] = useState(null);
   const [mainFilter, setMainFilter] = useState(null);
 
@@ -16,7 +17,8 @@ const Layout = () => {
     setGetCategory(cat);
     setShowNav(false);
     setGetCity(null);
-    setMainFilter(null)
+    setMainFilter(null);
+    setActiveBtn(cat);
   }
   
   return (
@@ -30,7 +32,9 @@ const Layout = () => {
         getCity, 
         setGetCity,
         mainFilter,
-        setMainFilter
+        setMainFilter, 
+        activeBtn, 
+        setActiveBtn
       }}>
         <Navbar/>
           <main>

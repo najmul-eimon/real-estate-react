@@ -20,11 +20,6 @@ const AllProperty = () => {
     changeView();
   }, []);
   
-
-  // category wise filtering
-  const filteredProperties = (category) => properties.filter(item => item.category === category);
-
-
   // filter properties
   const filterProperty = category => {
     setShowDropdown(false);
@@ -34,7 +29,7 @@ const AllProperty = () => {
       setFilterProperties(properties);
       return;
     }
-    setFilterProperties(filteredProperties(category));
+    setFilterProperties(properties.filter(item => item.category === category));
   }
 
   // pagination
