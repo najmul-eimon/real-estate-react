@@ -54,6 +54,7 @@ const Filter = ({data}) => {
   
   const {mainFilter, setMainFilter} = useContext(SaveToLocalContext);
   let obj = {};
+  let filteredArr = [];
   
   const handleSearchProperty = () => {
     if(location !== "Select Location"){
@@ -78,41 +79,23 @@ const Filter = ({data}) => {
       obj.feature = feature;
     }
 
-    // let entries = Object.entries(obj);
-    // let arr = [];
-
-    // properties.map(item => entries.map(([key, val]) => {
-    //     if (item[key] === val.toLowerCase()) {
-    //       // return item[key] === val;
-    //       return arr.push(item);
-    //     }
-    //   })
-    //   )
-
-  //  const myFilter = properties.filter(item => item.location === location.toLowerCase());
-    // setMainFilter(myFilter);
-  }
-
-
-  const filterArray = (arr, filters) => {
-    let filterKeys = Object.keys(filters);
-    return arr.filter(eachObj => {
-      return filterKeys.every(eachKey => {
-        if (!filters[eachKey].length) {
-          return true; // passing an empty filter means that filter is ignored.
+    let keys = Object.keys(obj);
+    for(let element of properties){
+      let num = 0;
+      for(let key of keys){
+        if(obj[key].toLowerCase() === element[key]){
+          num++;
         }
-        return filters[eachKey] === (eachObj[eachKey]);
-      });
-    });
-  };
-
-  useEffect(() => {
-    handleSearchProperty();
-    // console.log(obj);
-    console.log(filterArray(properties, obj));
-  }, [obj]);
-  
-  
+        else{
+          num--;
+        }
+      }
+      if(num === keys.length){
+        filteredArr.push(element);
+      }
+    }
+    setMainFilter(filteredArr);
+  }  
 
   return (
     <div className="filter-main">

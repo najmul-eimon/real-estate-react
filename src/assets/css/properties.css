@@ -98,6 +98,10 @@ properties CSS
   color: var(--white);
 }
 
+.all-properties .error-msg{
+  font-size: 16px;
+  color: var(--primary-text);
+}
 
 /*==================== single property =================*/
 .all-properties .property-cards.row {

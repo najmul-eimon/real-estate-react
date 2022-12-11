@@ -25,22 +25,34 @@ const Properties = () => {
   // get data from context
   const {getCategory, setGetCategory, getCity, mainFilter} = useContext(SaveToLocalContext);
 
+  // set error message for search property
+  let errorMsg = "";
+  if(mainFilter !== null){
+    if(mainFilter.length === 0){
+      errorMsg = "No Property found."
+    }
+    else{
+      errorMsg = "";
+    }
+  }
 
   // category wise filtering
-  const filteredProperties = (category) => properties.filter(item => getCity === null ? item.category === category.toLowerCase() : item.category === category.toLowerCase() && item.city === getCity);
-  const mainFiltered = (category) => mainFilter.filter(item => item.category === category);
+  const filteredProperties = (category) => {
+    if(mainFilter !== null){
+      return mainFilter.filter(item => item.category === category);
+      
+    }
+    else{
+      return properties.filter(item => getCity === null ? item.category === category.toLowerCase() : item.category === category.toLowerCase() && item.city === getCity);
+    }
+  }
 
   // city wise filtering
   const filteredCity = (city) => properties.filter(item => item.city === city.toLowerCase());
 
+  // initial data load
   useEffect(() => {
-    if(getCity !== null){
-      setFilterProperties(getCity === null ? properties : filteredCity(getCity));
-    }
-    
-    if(mainFilter !== null){
-      setFilterProperties(mainFilter === null ? properties : mainFilter);
-    }
+    setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
     
     // filter by click on nav link
     if(properties.findIndex(obj => obj.category === getCategory) !== -1){
@@ -48,7 +60,7 @@ const Properties = () => {
       setActiveBtn(getCategory);
     }    
     
-  }, [getCategory,mainFilter]);
+  }, [getCategory, mainFilter]);
 
 
   // filter properties
@@ -58,9 +70,10 @@ const Properties = () => {
     setActiveBtn(category.toLowerCase());
     
     if(category.toLowerCase() === 'all'){
-      setFilterProperties(getCity === null ? properties : filteredCity(getCity));
+      setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
       return;
     }
+    
     setFilterProperties(filteredProperties(getCategory));
   }
   
@@ -69,8 +82,8 @@ const Properties = () => {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 6;
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = filterProperties.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(filterProperties.length / itemsPerPage);
+  const currentItems = filterProperties?.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(filterProperties?.length / itemsPerPage);
   
   // pagination page click
   const handlePageClick = (event) => {
@@ -117,9 +130,10 @@ const Properties = () => {
                   </ul>
                 </div>
                 <div className="col-md-12">
+                  <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
                   <ul className="list-view" id="property-list-container">
                     {
-                      currentItems.map(property => <SinglePropertyList key={property.id} property={property}/>)
+                      currentItems?.map(property => <SinglePropertyList key={property.id} property={property}/>)
                     }
                   </ul>
                   <ReactPaginate
@@ -165,9 +179,10 @@ const Properties = () => {
                 </div>
                 <div className="col-md-12">
                   <div className="grid-view">
+                    <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
                     <div className="row property-cards property-filter-container" id="property-grid-container">
                       {
-                        currentItems.map(property => <SinglePropertyGrid key={property.id} property={property}/>)
+                        currentItems?.map(property => <SinglePropertyGrid key={property.id} property={property}/>)
                       }
                     </div>
                     <ReactPaginate

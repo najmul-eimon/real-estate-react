@@ -16,6 +16,7 @@ const Layout = () => {
     setGetCategory(cat);
     setShowNav(false);
     setGetCity(null);
+    setMainFilter(null)
   }
   
   return (
