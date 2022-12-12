@@ -1,7 +1,8 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../navigation/Footer';
 import Navbar from '../navigation/Navbar';
+import Loader from '../shared/Loader';
 
 
 export const SaveToLocalContext = createContext({});
@@ -12,6 +13,13 @@ const Layout = () => {
   const [activeBtn, setActiveBtn] = useState('all');
   const [getCity, setGetCity] = useState(null);
   const [mainFilter, setMainFilter] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  },[]);
 
   const setCategoryLocal = (cat) => {
     setGetCategory(cat);
@@ -36,6 +44,7 @@ const Layout = () => {
         activeBtn, 
         setActiveBtn
       }}>
+        {loading && <Loader/>}
         <Navbar/>
           <main>
             <Outlet/>

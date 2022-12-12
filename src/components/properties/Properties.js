@@ -8,8 +8,8 @@ import SinglePropertyList from './SinglePropertyList';
 import SinglePropertyGrid from './SinglePropertyGrid';
 import {properties} from '../../data/property';
 import { SaveToLocalContext } from '../layout/Layout';
-import '../../assets/css/properties.css';
 import { changeView } from '../../utility/utility';
+import '../../assets/css/properties.css';
 
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
