@@ -73,27 +73,34 @@ properties CSS
   overflow: hidden;
   position: absolute;
   left: 0;
+  top: 100%;
   z-index: 50;
   min-width: 195px;
   background-color: var(--white);
 }
 
-.all-properties .filter-btn-list .filter-dropdown button {
+.all-properties .filter-btn-list .filter-dropdown button,
+.all-properties .filter-btn-list .filter-dropdown span {
+  display: inline-block;
   font-size: 14px;
   color: var(--body-text);
   padding: 9px 16px;
   background-color: var(--white);
   width: 100%;
   text-align: left;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
 }
 
-.all-properties .filter-btn-list .filter-dropdown button:hover {
+.all-properties .filter-btn-list .filter-dropdown button:hover,
+.all-properties .filter-btn-list .filter-dropdown span:hover {
   background-color: rgba(22, 163, 173, 0.1);
   color: var(--primary);
 }
 
 .all-properties .filter-btn-list button.active,
-.all-properties .filter-btn-list .filter-dropdown button.active {
+.all-properties .filter-btn-list .filter-dropdown button.active,
+.all-properties .filter-btn-list .filter-dropdown span.active {
   background-color: var(--primary);
   color: var(--white);
 }
@@ -338,6 +345,11 @@ properties CSS
     margin-top: 0;
     margin-bottom: 24px;
     justify-content: center;
+  }
+
+  .all-properties .filter-btn-list .filter-dropdown {
+    right: 0;
+    left: auto;
   }
 
   .all-properties .property-cards.row {

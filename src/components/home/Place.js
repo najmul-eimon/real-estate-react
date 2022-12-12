@@ -7,7 +7,13 @@ import '../../assets/css/place.css';
 
 const Place = () => {
   // get data from context
-  const {setGetCity} = useContext(SaveToLocalContext);
+  const {setGetCategory, setActiveBtn, setGetCity} = useContext(SaveToLocalContext);
+
+  const handlePlace = (city) => {
+    setGetCity(city);
+    setGetCategory('all');
+    setActiveBtn('all');
+  }
 
   return (
     <section className="place">
@@ -24,7 +30,7 @@ const Place = () => {
                 {
                   places.map(({id, name, image}) => 
                     <div key={id} className="single-place">
-                      <Link to="property" onClick={() => setGetCity(name)}>
+                      <Link to="property" onClick={() => handlePlace(name)}>
                         <img src={image} className="img-fluid" alt=""/>
                         <div className="overlay">
                           <p>{name} <BiChevronRightCircle className='place-icon'/></p>

@@ -22,6 +22,7 @@ const Properties = () => {
     changeView();
   }, []);
 
+
   // initial data load
   useEffect(() => {
     setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
@@ -32,7 +33,8 @@ const Properties = () => {
       setActiveBtn(getCategory);
     }    
     
-  }, [getCategory, mainFilter]);
+  }, [getCategory, mainFilter, getCity]);
+
 
   // set error message for search property
   let errorMsg = "";
@@ -43,7 +45,8 @@ const Properties = () => {
     else{
       errorMsg = "";
     }
-  }
+  };
+  
 
   // category wise filtering
   const filteredProperties = (category) => {
@@ -109,19 +112,20 @@ const Properties = () => {
                       )
                     }
                     <li className='position-relative'>
-                      <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
+                      <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
                       {
                         showDropdown && (
                         <ul className='filter-dropdown'>
                           {
                             categories.slice(5).map((category, index) => 
                             <li key={index}>
-                              <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
+                              <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
                             </li>
                             )
                           }
                         </ul>
                       )}
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -157,19 +161,20 @@ const Properties = () => {
                       )
                     }
                     <li className='position-relative'>
-                      <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
+                      <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
                       {
                         showDropdown && (
                         <ul className='filter-dropdown'>
                           {
                             categories.slice(5).map((category, index) => 
                             <li key={index}>
-                              <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
+                              <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
                             </li>
                             )
                           }
                         </ul>
                       )}
+                      </button>
                     </li>
                   </ul>
                 </div>

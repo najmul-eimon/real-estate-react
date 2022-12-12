@@ -78,19 +78,20 @@ const AllProperty = () => {
                         )
                       }
                       <li className='position-relative'>
-                        <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
+                        <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
                         {
                           showDropdown && (
                           <ul className='filter-dropdown'>
                             {
                               categories.slice(5).map((category, index) => 
                               <li key={index}>
-                                <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
+                                <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
                               </li>
                               )
                             }
                           </ul>
                         )}
+                        </button>
                       </li>
                     </ul>
                   </div>
@@ -125,19 +126,20 @@ const AllProperty = () => {
                         )
                       }
                       <li className='position-relative'>
-                        <button onClick={() => setShowDropdown(!showDropdown)}>More</button>
+                        <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
                         {
                           showDropdown && (
                           <ul className='filter-dropdown'>
                             {
                               categories.slice(5).map((category, index) => 
                               <li key={index}>
-                                <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
+                                <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
                               </li>
                               )
                             }
                           </ul>
                         )}
+                        </button>
                       </li>
                     </ul>
                   </div>
