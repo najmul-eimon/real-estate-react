@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
 import {BsChevronDown} from 'react-icons/bs';
 import {IoMdClose} from 'react-icons/io';
-import '../../assets/css/common.css';
 import { SaveToLocalContext } from '../layout/Layout';
+import logo from '../../assets/images/logo.png';
+import '../../assets/css/common.css';
 
 
 const Navbar = () => {
@@ -48,7 +48,6 @@ const Navbar = () => {
                       </li>
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/property" role="button" onClick={() => setCategoryLocal("all")}>
-                        {/* <NavLink className="nav-link" to="/property" role="button"> */}
                           Property <BsChevronDown className='arrow-icon'/>
                         </NavLink>
                         <ul className="dropdown-submenu custom-scrollbar">

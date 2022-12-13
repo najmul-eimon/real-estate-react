@@ -1,13 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {BsSliders} from 'react-icons/bs';
 import {FiSearch} from 'react-icons/fi';
-import MultiRangeSlider from "multi-range-slider-react";
 import { SaveToLocalContext } from "../layout/Layout";
 import {properties} from '../../data/property';
 import FilterDropdown from "./FilterDropdown";
-import "../../assets/css/filter-option.css";
 import FilterRange from "./FilterRange";
+import "../../assets/css/filter-option.css";
 
 const Filter = ({data}) => {
 
@@ -21,7 +20,7 @@ const Filter = ({data}) => {
 
   const [location, setLocation] = useState("Select Location");
   const [type, setType] = useState("Property Type");
-  const [category, setCategory] = useState("Category");
+  const [category, setCategory] = useState("Select Category");
   const [status, setStatus] = useState("Select Status");
   const [city, setCity] = useState("Select City");
   const [room, setRoom] = useState("Select Room");
@@ -53,9 +52,22 @@ const Filter = ({data}) => {
     setMaxAreaValue(e.maxValue);
   };
   
-  const {setActiveBtn, setGetCategory, setMainFilter} = useContext(SaveToLocalContext);
+  const {setActiveBtn, setGetCategory, setMainFilter, resetFilter, setResetFilter} = useContext(SaveToLocalContext);
   let obj = {};
   let filteredArr = [];
+
+  useEffect(() => {
+    if(resetFilter){
+      setLocation("Select Location");
+      setType("Property Type");
+      setCategory("Select Category");
+      setStatus("Select Status");
+      setCity("Select City");
+      setRoom("Select Room");
+      setFeature("Select Feature");
+      setResetFilter(false);
+    }
+  }, [resetFilter,setResetFilter]);
   
   const handleSearchProperty = () => {
     if(location !== "Select Location"){
@@ -64,7 +76,7 @@ const Filter = ({data}) => {
     if(type !== "Property Type"){
       obj.type = type;
     }
-    if(category !== "Category"){
+    if(category !== "Select Category"){
       obj.category = category;
     }
     if(status !== "Select Status"){

@@ -14,12 +14,17 @@ const Layout = () => {
   const [getCity, setGetCity] = useState(null);
   const [mainFilter, setMainFilter] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [resetFilter, setResetFilter] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  },[]);
+
+    const body = document.querySelector('body');
+    showNav ? body.style.overflow = "hidden" : body.style.overflow = "visible";
+    
+  },[showNav]);
 
   const setCategoryLocal = (cat) => {
     setGetCategory(cat);
@@ -27,6 +32,7 @@ const Layout = () => {
     setGetCity(null);
     setMainFilter(null);
     setActiveBtn(cat);
+    setResetFilter(true);
   }
   
   return (
@@ -42,7 +48,9 @@ const Layout = () => {
         mainFilter,
         setMainFilter, 
         activeBtn, 
-        setActiveBtn
+        setActiveBtn,
+        resetFilter,
+        setResetFilter
       }}>
         {loading && <Loader/>}
         <Navbar/>

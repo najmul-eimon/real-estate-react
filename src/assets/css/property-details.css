@@ -383,6 +383,13 @@ property details CSS
     grid-row: 1/2;
     grid-column: 1/2;
   }
+  .property-details .details-images .single-img {
+    height: 180px;
+  }
+  .property-details .details-images .single-img img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /*===========================================================

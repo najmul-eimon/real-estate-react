@@ -89,6 +89,7 @@ const Properties = () => {
     const newOffset = (event.selected * itemsPerPage) % filterProperties.length;
     setItemOffset(newOffset);
   };
+  
 
   return (
     <div className="all-properties">
@@ -146,6 +147,7 @@ const Properties = () => {
                     renderOnZeroPageCount={null}
                     className="paginate"
                   />
+                  
                 </div>
               </Tab>
 
