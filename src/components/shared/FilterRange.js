@@ -6,15 +6,15 @@ const FilterRange = ({data, minValue, maxValue, handleInput, name, dataClass}) =
   return (
     <div className={data === "sidebar" ? "col-sm-12" : "col-sm-6"}>
       <h4>{name}</h4>
-      <MultiRangeSlider className={dataClass} min={0} max={10000} step={100} minValue={minValue} maxValue={maxValue}
+      <MultiRangeSlider className={dataClass} min={0} max={10000} step={100} minValue={minValue} maxValue={maxValue} ruler={false} label={false}
           onInput={(e) => {
             handleInput(e);
           }}
         />
         <div className="range-value">
-          <p>${minValue}</p>
+          <p>{dataClass === "price-range" && "$"}{minValue}</p>
           <p>to</p>
-          <p>${maxValue}</p>
+          <p>{dataClass === "price-range" && "$"}{maxValue}</p>
         </div>
     </div>
   )

@@ -110,7 +110,7 @@ a:focus {
 }
 
 
-/* section title */
+/*==================== section title ====================*/
 .title {
   padding-bottom: 32px;
 }
@@ -142,12 +142,12 @@ a:focus {
   border-radius: 4px;
 }
 
-/* main */
+/*==================== main ====================*/
 main {
   margin-top: 86px;
 }
 
-/* button hover style */
+/*==================== button hover style ====================*/
 .btn-style {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -181,7 +181,7 @@ main {
   transform: scaleY(1);
 }
 
-/* video button animation */
+/*==================== video button animation ====================*/
 @-webkit-keyframes ripple {
   from {
     opacity: 1;
@@ -210,7 +210,7 @@ main {
   }
 }
 
-/* responsive */
+/*==================== responsive ====================*/
 @media (min-width:992px) and (max-width:1199px) {
   .title h2 {
     font-size: 30px;
@@ -251,7 +251,7 @@ main {
   }
 }
 
-/* responsive grid */
+/*==================== responsive grid ====================*/
 @media (min-width: 1200px) {
   .col-xl-7half {
     flex: 0 0 auto;
@@ -355,6 +355,7 @@ main {
   animation-delay: 0.2s;
 }
 
+/*==================== preloader animation ====================*/
 @-webkit-keyframes loaderAnimation {
 
   0%,
@@ -457,6 +458,7 @@ Quick-menu breadcrumb CSS
   padding-right: 0;
 }
 
+/*==================== responsive ====================*/
 @media screen and (max-width:575px) {
   .quick-menu {
     display: none;
@@ -597,7 +599,7 @@ header {
 }
 
 
-
+/*==================== responsive ====================*/
 @media (min-width:992px) and (max-width:1199px) {
   .navigation .nav-bar {
     justify-content: flex-end;
@@ -643,8 +645,6 @@ header {
   .navigation .main-nav.show-nav {
     right: 0;
   }
-
-
 
   .navigation .mobile-header {
     display: flex;
@@ -831,6 +831,7 @@ footer {
   color: var(--primary);
 }
 
+/*==================== responsive ====================*/
 @media (min-width:768px) and (max-width:1199px) {
   .top-footer .footer-content {
     padding-left: 0;

@@ -232,6 +232,8 @@ property details CSS
   height: 100%;
 }
 
+/*==================== responsive ====================*/
+
 @media (min-width:1200px) and (max-width:1399px) {
   .property-details .details-box .tab-content .text p {
     font-size: 15px;
@@ -417,6 +419,7 @@ related properties CSS
   padding: 24px 12px;
 }
 
+/*==================== responsive ====================*/
 @media screen and (max-width:575px) {
   .related-properties .title h2::after {
     left: 0;

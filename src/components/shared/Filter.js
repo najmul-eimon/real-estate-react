@@ -26,11 +26,11 @@ const Filter = ({data}) => {
   const [room, setRoom] = useState("Select Room");
   const [feature, setFeature] = useState("Select Feature");
 
-  const [minPriceValue, setMinPriceValue] = useState(1000);
-  const [maxPriceValue, setMaxPriceValue] = useState(8000);
+  const [minPriceValue, setMinPriceValue] = useState(0);
+  const [maxPriceValue, setMaxPriceValue] = useState(10000);
 
-  const [minAreaValue, setMinAreaValue] = useState(1000);
-  const [maxAreaValue, setMaxAreaValue] = useState(8000);
+  const [minAreaValue, setMinAreaValue] = useState(0);
+  const [maxAreaValue, setMaxAreaValue] = useState(10000);
 
   const [showMoreFilters, setShowMoreFilters] = useState(false);
 
@@ -65,6 +65,10 @@ const Filter = ({data}) => {
       setCity("Select City");
       setRoom("Select Room");
       setFeature("Select Feature");
+      setMinPriceValue(0);
+      setMaxPriceValue(10000);
+      setMinAreaValue(0);
+      setMaxAreaValue(10000);
       setResetFilter(false);
     }
   }, [resetFilter,setResetFilter]);

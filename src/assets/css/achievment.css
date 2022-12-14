@@ -40,6 +40,8 @@ achievement CSS
   color: var(--body-text);
 }
 
+/*==================== responsive ====================*/
+
 @media (min-width:992px) and (max-width:1199px) {
   .achievement {
     padding: 32px 0;

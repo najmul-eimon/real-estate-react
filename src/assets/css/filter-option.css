@@ -1,7 +1,6 @@
 /*===========================================================
 Select CSS
 =============================================================*/
-
 .custom-select .select-btn {
   border: 0;
   outline: none;
@@ -100,7 +99,7 @@ filter properties CSS
   box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
 }
 
-/* property page filter */
+/*==================== property page filter ====================*/
 .property-page .filter-main {
   margin-bottom: 32px;
 }
@@ -137,9 +136,8 @@ filter properties CSS
   padding-top: 12px;
 }
 
-.filter-main .multi-range-slider .labels,
-.filter-main .multi-range-slider .caption,
-.filter-main .multi-range-slider .ruler {
+
+.filter-main .multi-range-slider .caption {
   display: none !important;
 }
 
@@ -152,7 +150,7 @@ filter properties CSS
 }
 
 .filter-main .multi-range-slider .bar-inner {
-  background-color: #16A4AD;
+  background-color: var(--primary);
   border: 0;
   box-shadow: none;
 }
@@ -162,7 +160,7 @@ filter properties CSS
   height: 12px;
   border: solid 1px var(--body-text2);
   box-shadow: 0px 0px 37px rgba(34, 34, 51, 0.08);
-  background-color: #fff;
+  background-color: var(--white);
   margin: -4px -8px;
 }
 
@@ -211,6 +209,8 @@ filter properties CSS
   border-radius: 8px;
 }
 
+
+/*==================== responsive ====================*/
 @media (min-width:992px) and (max-width:1199px) {
   .filter-main .filter-buttons {
     gap: 4px;

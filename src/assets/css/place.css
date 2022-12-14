@@ -82,6 +82,7 @@ place CSS
   color: var(--white);
 }
 
+/*==================== responsive ====================*/
 @media (min-width:768px) and (max-width:1199px) {
   .place {
     padding: 32px 0;

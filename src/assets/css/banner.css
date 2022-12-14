@@ -50,6 +50,8 @@ Banner CSS
   padding: 0 12px;
 }
 
+/*==================== responsive ====================*/
+
 @media (min-width:992px) and (max-width:1199px) {
   .banner {
     padding-bottom: 32px;

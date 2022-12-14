@@ -38,16 +38,16 @@ const Layout = () => {
   return (
     <>
       <SaveToLocalContext.Provider value={{
-        showNav, 
-        setShowNav, 
-        getCategory, 
-        setGetCategory, 
+        showNav,
+        setShowNav,
+        getCategory,
+        setGetCategory,
         setCategoryLocal,
-        getCity, 
+        getCity,
         setGetCity,
         mainFilter,
-        setMainFilter, 
-        activeBtn, 
+        setMainFilter,
+        activeBtn,
         setActiveBtn,
         resetFilter,
         setResetFilter

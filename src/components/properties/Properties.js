@@ -23,19 +23,6 @@ const Properties = () => {
   }, []);
 
 
-  // initial data load
-  useEffect(() => {
-    setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
-    
-    // filter by click on nav link
-    if(properties.findIndex(obj => obj.category === getCategory) !== -1){
-      setFilterProperties(filteredProperties(getCategory));
-      setActiveBtn(getCategory);
-    }    
-    
-  }, [getCategory, mainFilter, getCity]);
-
-
   // set error message for search property
   let errorMsg = "";
   if(mainFilter !== null){
@@ -75,6 +62,19 @@ const Properties = () => {
     
     setFilterProperties(filteredProperties(getCategory));
   }
+
+  
+  // initial data load
+  useEffect(() => {
+    setFilterProperties(mainFilter === null ? getCity === null ? properties : filteredCity(getCity) : mainFilter);
+    
+    // filter by click on nav link
+    if(properties.findIndex(obj => obj.category === getCategory) !== -1){
+      setFilterProperties(filteredProperties(getCategory));
+      setActiveBtn(getCategory);
+    }    
+    
+  }, [getCategory, mainFilter, getCity]);
   
 
   // pagination
