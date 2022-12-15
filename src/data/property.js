@@ -1375,7 +1375,7 @@ export const properties = [
 
   {
     id: "10",
-    name: "luxury Villa in Northfield",
+    name: "Luxury Villa in Northfield",
     category: "villa",
     price: 7100,
     city: "minnesota",
