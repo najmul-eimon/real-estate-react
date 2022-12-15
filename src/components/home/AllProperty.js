@@ -13,7 +13,7 @@ const AllProperty = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeBtn, setActiveBtn] = useState('all');
   const [filterProperties, setFilterProperties] = useState(properties);
-  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex'];
+  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxury home', 'office', 'single family'];
 
   // switch to grid view from list view in mobile screen
   useEffect(() => {

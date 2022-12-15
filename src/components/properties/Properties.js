@@ -14,7 +14,7 @@ import '../../assets/css/properties.css';
 const Properties = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [filterProperties, setFilterProperties] = useState(properties);
-  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxuary home', 'office', 'single family', 'duplex'];
+  const categories = ['all', 'appartment', 'land', 'house', 'villa', 'luxury home', 'office', 'single family'];
   const {activeBtn, setActiveBtn, getCategory, setGetCategory, getCity, mainFilter} = useContext(SaveToLocalContext);
 
   // switch to grid view from list view in mobile screen

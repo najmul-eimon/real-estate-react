@@ -34,13 +34,13 @@ const Filter = ({data}) => {
 
   const [showMoreFilters, setShowMoreFilters] = useState(false);
 
-  const locations = ["garden city", "jamestown", "Daly City", "Oakland", "Alexandria", "New Orleans", "Northfield", "Saint Cloud", "Jersey City", "Atlantic City", "Ellensburg", "Olympia"];
+  const locations = ["garden city", "Daly City", "Alexandria", "Northfield", "Jersey City", "Ellensburg"];
   const types = ["Single House", "Town house", "Multi Family House"];
-  const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family", "duplex"];
+  const categories = ["appartment", "land", "house", "villa", "luxury home", "office", "single family"];
   const allStatus = ["Rent", "Sale"];
   const cities = ["New york", "California", "Louisiana", "Minnesota", "New Jersey", "Washington"];
   const rooms = ["Single Room", "Double Room", "Many Room"];
-  const features = ["Duplex", "Delux", "Adjoining", "Suite"];
+  const features = ["Duplex", "Delux", "Adjoining"];
 
   const handlePriceInput = (e) => {
     setMinPriceValue(e.minValue);
