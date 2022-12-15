@@ -4,6 +4,12 @@ import property3 from '../assets/images/properties/img3.jpg';
 import property4 from '../assets/images/properties/img4.jpg';
 import property5 from '../assets/images/properties/img5.jpg';
 import property6 from '../assets/images/properties/img6.jpg';
+import property7 from '../assets/images/properties/img7.jpg';
+import property8 from '../assets/images/properties/img8.jpg';
+import property9 from '../assets/images/properties/img9.jpg';
+import property10 from '../assets/images/properties/img10.jpg';
+import property11 from '../assets/images/properties/img11.jpg';
+import property12 from '../assets/images/properties/img12.jpg';
 import video from '../assets/images/video.jpg';
 import img1 from '../assets/images/property-details/img1.jpg';
 import img2 from '../assets/images/property-details/img2.jpg';
@@ -933,7 +939,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property5,
+    image: property7,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1083,7 +1089,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property6,
+    image: property8,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1233,7 +1239,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property4,
+    image: property9,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1383,7 +1389,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property3,
+    image: property10,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1533,7 +1539,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property2,
+    image: property11,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1683,7 +1689,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property1,
+    image: property12,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1983,7 +1989,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property1,
+    image: property9,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2283,7 +2289,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property6,
+    image: property11,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2433,7 +2439,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property5,
+    image: property7,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2583,7 +2589,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property4,
+    image: property8,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
