@@ -933,7 +933,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property6,
+    image: property5,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1083,7 +1083,7 @@ export const properties = [
     room: "double room",
     bedRoom: 3,
     feature: "delux",
-    image: property5,
+    image: property6,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1833,7 +1833,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property4,
+    image: property2,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -1983,7 +1983,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property3,
+    image: property1,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2283,7 +2283,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property2,
+    image: property6,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2433,7 +2433,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property1,
+    image: property5,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
@@ -2583,7 +2583,7 @@ export const properties = [
     room: "many room",
     bedRoom: 3,
     feature: "adjoining",
-    image: property6,
+    image: property4,
     description: [
       "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface.",
       "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage.",
