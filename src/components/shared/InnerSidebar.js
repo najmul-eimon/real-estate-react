@@ -33,7 +33,7 @@ const InnerSidebar = ({data}) => {
                   }
                 </ul>
                 <Link to={`/property/property-details/${id}`} className="item-title">{name}</Link>
-                <p>$ {price}</p>
+                <p>${price}</p>
               </div>
             </li>
             )
@@ -76,7 +76,7 @@ const InnerSidebar = ({data}) => {
               <div className="others">
                 <div className="d-flex align-items-center justify-content-between">
                   <span className="d-flex align-items-center text-truncate"><IoCalendarNumberOutline className='date-icon'/>{date}</span>
-                  <Link to={`/blog/blog-details/${id}`} className="blog-details-btn"><HiArrowUpRight className='details-icon'/></Link>
+                  <Link to={`/blog/blog-details/${id}`} className="blog-details-btn" onClick={window.scrollTo(0, 0)}><HiArrowUpRight className='details-icon'/></Link>
                 </div>
                 <h4>{title.length > 26 ? title.substring(0, 26) + "..." : title}</h4>
               </div>
