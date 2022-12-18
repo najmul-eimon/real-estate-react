@@ -15,7 +15,7 @@ Banner CSS
 }
 
 .banner .banner-text {
-  background: url(../images/banner.jpg) no-repeat center;
+  background: url('../images/banner.jpg') no-repeat center;
   background-size: cover;
   border-radius: 30px;
   padding: 64px 0;
