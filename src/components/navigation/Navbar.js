@@ -35,7 +35,7 @@ const Navbar = () => {
                   <div className={showNav ? 'main-nav show-nav' : 'main-nav'}>
                     <div className="mobile-header">
                       <Link className="navbar-brand" to="/">
-                        <img src="assets/images/logo.png" alt=""/>
+                        <img src={logo} alt=""/>
                       </Link>
 
                       <button type="button" id="close-nav" onClick={() => setShowNav(false)}>
