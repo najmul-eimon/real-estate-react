@@ -8,7 +8,7 @@ import '../../assets/css/common.css';
 
 
 const Navbar = () => {
-  const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family", "duplex"]; 
+  const categories = ["appartment", "land", "house", "villa", "luxuary home", "office", "single family"]; 
   const {showNav, setShowNav, setCategoryLocal} = useContext(SaveToLocalContext);
 
   return (
