@@ -104,10 +104,10 @@ const Footer = () => {
 
               <ul className="footer-links">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="property">Property</Link></li>
-                <li><Link to="about">About</Link></li>
-                <li><Link to="blog">Blog</Link></li>
-                <li><Link to="contact">Contact us</Link></li>
+                <li><Link to="/property">Property</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/contact">Contact us</Link></li>
               </ul>
             </div>
           </div>
