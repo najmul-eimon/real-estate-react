@@ -38,10 +38,10 @@ const Footer = () => {
                   <h4>Discover</h4>
                 </div>
                 <ul className="footer-links">
-                  <li><Link to="property">New york</Link></li>
-                  <li><Link to="property">San Francisco</Link></li>
-                  <li><Link to="property">Minnesota</Link></li>
-                  <li><Link to="property">Los Angeles</Link></li>
+                  <li><Link to="/property">New york</Link></li>
+                  <li><Link to="/property">San Francisco</Link></li>
+                  <li><Link to="/property">Minnesota</Link></li>
+                  <li><Link to="/property">Los Angeles</Link></li>
                 </ul>
               </div>
             </div>
@@ -51,10 +51,10 @@ const Footer = () => {
                   <h4>Company</h4>
                 </div>
                 <ul className="footer-links">
-                  <li><Link to="about">About</Link></li>
-                  <li><Link to="contact">Contact us</Link></li>
-                  <li><Link to="property">Property</Link></li>
-                  <li><Link to="blog">Blog</Link></li>
+                  <li><Link to="/about">About</Link></li>
+                  <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="/property">Property</Link></li>
+                  <li><Link to="/blog">Blog</Link></li>
                 </ul>
               </div>
             </div>
