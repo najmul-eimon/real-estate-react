@@ -398,7 +398,7 @@ property details CSS
 related properties CSS
 =============================================================*/
 .related-properties {
-  padding-top: 0;
+  padding-bottom: 64px;
 }
 
 .related-properties .title {
