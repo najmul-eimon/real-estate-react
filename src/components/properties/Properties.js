@@ -6,8 +6,8 @@ import {FaRegListAlt} from 'react-icons/fa';
 import {properties} from '../../data/property';
 import { SaveToLocalContext } from '../layout/Layout';
 import { changeView } from '../../utility/utility';
-import PropertyList from '../shared/PropertyList';
-import PropertyGrid from '../shared/PropertyGrid';
+import PropertyList from './PropertyList';
+import PropertyGrid from './PropertyGrid';
 import '../../assets/css/properties.css';
 
 const Properties = () => {

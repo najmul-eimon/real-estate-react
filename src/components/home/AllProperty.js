@@ -5,8 +5,8 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { FaRegListAlt } from 'react-icons/fa';
 import { BsGrid } from 'react-icons/bs';
-import PropertyList from '../shared/PropertyList';
-import PropertyGrid from '../shared/PropertyGrid';
+import PropertyList from '../properties/PropertyList';
+import PropertyGrid from '../properties/PropertyGrid';
 
 const AllProperty = () => {
   const [showDropdown, setShowDropdown] = useState(false);

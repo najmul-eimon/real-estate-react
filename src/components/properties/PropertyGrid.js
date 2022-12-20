@@ -1,7 +1,7 @@
 import ReactPaginate from 'react-paginate';
-import SinglePropertyList from '../properties/SinglePropertyList';
+import SinglePropertyGrid from './SinglePropertyGrid';
 
-const PropertyList = ({activeBtn, errorMsg, pageCount, handlePageClick, categories, setShowDropdown, showDropdown, filterProperty, currentItems}) => {
+const PropertyGrid = ({activeBtn, errorMsg, pageCount, handlePageClick, categories, setShowDropdown, showDropdown, filterProperty, currentItems}) => {
   return (
     <>
       <div className="col-md-12">
@@ -32,26 +32,27 @@ const PropertyList = ({activeBtn, errorMsg, pageCount, handlePageClick, categori
         </ul>
       </div>
       <div className="col-md-12">
-        <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
-        <ul className="list-view" id="property-list-container">
-          {
-            currentItems?.map(property => <SinglePropertyList key={property.id} property={property}/>)
-          }
-        </ul>
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=""
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          pageCount={pageCount}
-          previousLabel=""
-          renderOnZeroPageCount={null}
-          className="paginate"
-        />
-        
+        <div className="grid-view">
+          <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
+          <div className="row property-cards property-filter-container" id="property-grid-container">
+            {
+              currentItems?.map(property => <SinglePropertyGrid key={property.id} property={property}/>)
+            }
+          </div>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=""
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel=""
+            renderOnZeroPageCount={null}
+            className="paginate"
+          />
+        </div>
       </div>
     </>
   )
 }
 
-export default PropertyList
+export default PropertyGrid
