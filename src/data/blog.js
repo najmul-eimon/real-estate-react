@@ -39,7 +39,8 @@ export const blogs = [
     ],
     status: "recent",
     image: blog1,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "2",
@@ -68,7 +69,8 @@ export const blogs = [
     ],
     status: "recent",
     image: blog2,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "3",
@@ -97,7 +99,8 @@ export const blogs = [
     ],
     status: "recent",
     image: blog3,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "4",
@@ -126,7 +129,8 @@ export const blogs = [
     ],
     status: "old",
     image: blog10,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "5",
@@ -155,7 +159,8 @@ export const blogs = [
     ],
     status: "old",
     image: blog11,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "6",
@@ -184,7 +189,8 @@ export const blogs = [
     ],
     status: "old",
     image: blog6,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "7",
@@ -213,7 +219,8 @@ export const blogs = [
     ],
     status: "old",
     image: blog7,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "8",
@@ -242,7 +249,8 @@ export const blogs = [
     ],
     status: "old",
     image: blog8,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   },
   {
     id: "9",
@@ -271,6 +279,7 @@ export const blogs = [
     ],
     status: "old",
     image: blog9,
-    gallery: [blogDetail1, blogDetail2, blogDetail3]
+    mainImage: blogDetail1,
+    gallery: [blogDetail2, blogDetail3]
   }
 ]
