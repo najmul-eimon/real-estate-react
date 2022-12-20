@@ -3,12 +3,11 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import {BsGrid} from 'react-icons/bs';
 import {FaRegListAlt} from 'react-icons/fa';
-import ReactPaginate from 'react-paginate';
-import SinglePropertyList from './SinglePropertyList';
-import SinglePropertyGrid from './SinglePropertyGrid';
 import {properties} from '../../data/property';
 import { SaveToLocalContext } from '../layout/Layout';
 import { changeView } from '../../utility/utility';
+import PropertyList from '../shared/PropertyList';
+import PropertyGrid from '../shared/PropertyGrid';
 import '../../assets/css/properties.css';
 
 const Properties = () => {
@@ -103,103 +102,12 @@ const Properties = () => {
             >
               {/* tab for list view */}
               <Tab eventKey="list" title={<FaRegListAlt className='view-icon'/>}>
-                <div className="col-md-12">
-                  <ul className="d-flex align-items-center filter-btn-list">
-                    {
-                      categories.slice(0, 5).map((category, index) => 
-                      <li key={index}>
-                        <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
-                      </li>
-                      )
-                    }
-                    <li className='position-relative'>
-                      <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
-                      {
-                        showDropdown && (
-                        <ul className='filter-dropdown'>
-                          {
-                            categories.slice(5).map((category, index) => 
-                            <li key={index}>
-                              <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
-                            </li>
-                            )
-                          }
-                        </ul>
-                      )}
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-md-12">
-                  <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
-                  <ul className="list-view" id="property-list-container">
-                    {
-                      currentItems?.map(property => <SinglePropertyList key={property.id} property={property}/>)
-                    }
-                  </ul>
-                  <ReactPaginate
-                    breakLabel="..."
-                    nextLabel=""
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={3}
-                    pageCount={pageCount}
-                    previousLabel=""
-                    renderOnZeroPageCount={null}
-                    className="paginate"
-                  />
-                  
-                </div>
+                <PropertyList categories={categories} pageCount={pageCount} handlePageClick={handlePageClick} errorMsg={errorMsg} activeBtn={activeBtn} setShowDropdown={setShowDropdown} showDropdown={showDropdown} filterProperty={filterProperty} currentItems={currentItems}/>
               </Tab>
 
               {/* tab for grid view */}
               <Tab eventKey="grid" title={<BsGrid className='view-icon'/>}>
-                <div className="col-md-12">
-                  <ul className="d-flex align-items-center filter-btn-list">
-                    {
-                      categories.slice(0, 5).map((category, index) => 
-                      <li key={index}>
-                        <button type="button" className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</button>
-                      </li>
-                      )
-                    }
-                    <li className='position-relative'>
-                      <button onClick={() => setShowDropdown(!showDropdown)} onBlur={() => setShowDropdown(false)}>More
-                      {
-                        showDropdown && (
-                        <ul className='filter-dropdown'>
-                          {
-                            categories.slice(5).map((category, index) => 
-                            <li key={index}>
-                              <span className={activeBtn === category ? "active" : ""} onClick={() => filterProperty(category)}>{category}</span>
-                            </li>
-                            )
-                          }
-                        </ul>
-                      )}
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div className="col-md-12">
-                  <div className="grid-view">
-                    <p className='error-msg'>{errorMsg !== "" ? errorMsg : ""}</p>
-                    <div className="row property-cards property-filter-container" id="property-grid-container">
-                      {
-                        currentItems?.map(property => <SinglePropertyGrid key={property.id} property={property}/>)
-                      }
-                    </div>
-                    <ReactPaginate
-                      breakLabel="..."
-                      nextLabel=""
-                      onPageChange={handlePageClick}
-                      pageRangeDisplayed={3}
-                      pageCount={pageCount}
-                      previousLabel=""
-                      renderOnZeroPageCount={null}
-                      className="paginate"
-                    />
-                  </div>
-                </div>
+                <PropertyGrid categories={categories} pageCount={pageCount} handlePageClick={handlePageClick} errorMsg={errorMsg} activeBtn={activeBtn} setShowDropdown={setShowDropdown} showDropdown={showDropdown} filterProperty={filterProperty} currentItems={currentItems}/>
               </Tab>
             </Tabs>
           </div>
