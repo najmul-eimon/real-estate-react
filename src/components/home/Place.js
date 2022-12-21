@@ -21,7 +21,7 @@ const Place = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="title text-center">
-              <h2>Most Populer Place</h2>
+              <h2>Most Popular Place</h2>
             </div>
           </div>
           <div className="col-md-12">

@@ -61,10 +61,10 @@ const InnerSidebar = ({data}) => {
         <ContactFrom data="sidebar"/>
       </div>
 
-      {/* Leatest Blogs */}
+      {/* Latest Blogs */}
       <div className="details-box blog-box">
         <div className="details-title">
-          <h5>Leatest Blogs</h5>
+          <h5>Latest Blogs</h5>
         </div>
         <ul className="blog-list">
           {

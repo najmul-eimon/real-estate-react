@@ -124,7 +124,7 @@ contact CSS
   border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
-  padding: 13px 0;
+  padding: 12px 0;
 }
 
 /*==================== responsive ====================*/
@@ -181,7 +181,6 @@ contact CSS
 
   .contact-form-fields .submit-btn {
     font-size: 14px;
-    padding: 8px 0;
   }
 }
 
@@ -218,8 +217,8 @@ address CSS
 .address .address-card a {
   display: inline-block;
   margin-top: 12px;
-  padding: 9px 38px;
-  font-size: 18px;
+  padding: 12px 38px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--white);
   background-color: var(--primary);
