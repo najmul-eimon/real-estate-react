@@ -24,7 +24,8 @@ const Partner = () => {
           <div className="col-md-12">
             <Swiper 
               pagination={{clickable:true}} 
-              modules={[Pagination]} loop={true}
+              modules={[Pagination]} 
+              loop={true}
               spaceBetween={24}
               autoplay= {true}
               slidesPerGroup={1}
